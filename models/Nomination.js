@@ -1,4 +1,10 @@
-const { Model, DataTypes } = require("sequelize");
+
+
+
+
+module.exports = Nomination;
+
+/* const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const User = require("./User"); // Import the User model
 const Movie = require("./Movie"); // Import the Movie model
@@ -41,6 +47,5 @@ Nomination.init(
     underscored: true,
 
 }
-);
+); */
 
-module.exports = Nomination;

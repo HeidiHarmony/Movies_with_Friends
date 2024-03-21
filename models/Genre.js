@@ -1,4 +1,11 @@
-const { DataTypes, Model } = require("sequelize");
+
+
+
+
+module.exports = Genre;
+
+
+/* const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Genres extends Model {
@@ -36,6 +43,5 @@ Genres.init(
     timestamps: false,
     underscored: true,
   }
-);
+); */
 
-module.exports = Genres;

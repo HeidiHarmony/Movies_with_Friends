@@ -1,4 +1,10 @@
-const { DataTypes, Model } = require('sequelize');
+
+
+
+
+module.exports = Month;
+
+/* const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
@@ -68,5 +74,4 @@ Calendar.init(
 
 );
 
-
-module.exports = Calendar;
+ */

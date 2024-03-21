@@ -1,4 +1,9 @@
-const { DataTypes, Model } = require("sequelize");
+
+
+
+module.exports = Movie;
+
+/* const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Movie extends Model {
@@ -34,5 +39,5 @@ Movie.init(
     underscored: true,
   }
 );
+ */
 
-module.exports = Movie;

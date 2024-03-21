@@ -1,4 +1,9 @@
-const { DataTypes, Model } = require('sequelize');
+
+
+
+module.exports = Vote;
+
+/* const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class UserMovieVote extends Model {
@@ -41,6 +46,5 @@ UserMovieVote.init(
     tableName: 'user_movie_votes',
     timestamps: false,
     underscored: true,
-});
+}); */
 
-module.exports = UserMovieVote;

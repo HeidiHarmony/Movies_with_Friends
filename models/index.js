@@ -1,4 +1,10 @@
-const User = require("./User");
+
+
+
+
+
+
+/* const User = require("./User");
 const Genres = require("./genres");
 const Movie = require("./Movie");
 const Nomination = require("./Nomination"); // Renamed from 'movieNominate' for clarity
@@ -34,4 +40,4 @@ module.exports = {
   Rating,
   UserMovieVote,
   Discussion,
-};
+}; */

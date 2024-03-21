@@ -1,4 +1,9 @@
-const { DataTypes, Model } = require("sequelize");
+
+
+
+module.exports = Rating;
+
+/* const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Rating extends Model {
@@ -49,5 +54,4 @@ Rating.init(
     underscored: true,
   }
 );
-
-module.exports = Rating;
+ */
