@@ -1,4 +1,4 @@
-const path = require('path');
+/* const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -39,4 +39,4 @@ app.use(routes);
 // Connect to the database before starting the Express.js server
 sequelize.sync().then(() => {
   app.listen(PORT, () => console.log("Now listening"));
-});
+}); */
