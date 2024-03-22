@@ -1,40 +1,20 @@
 
-
-
-
-module.exports = Genre;
-
-
-/* const { DataTypes, Model } = require("sequelize");
+const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Genres extends Model {
-  // checkPassword(loginPw) {
-  //   return bcrypt.compareSync(loginPw, this.password);
-  // }
-}
-Genres.init(
+class Genre extends Model {}
+
+Genre.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    movieId: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "Movie",
-        key: "id",
-      },
     },
   },
   {
@@ -43,5 +23,6 @@ Genres.init(
     timestamps: false,
     underscored: true,
   }
-); */
+); 
 
+module.exports = Genre;

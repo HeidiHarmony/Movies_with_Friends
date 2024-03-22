@@ -14,9 +14,9 @@ const showSignInForm = document.getElementById("landing-showlogin");
 const signInMember = document.getElementById("signin-member");
 
 showSignInForm.addEventListener("click", function () {
-  console.log("clicked show sign in form button");
+  console.log("clicked show signin form button");
 signInMember.classList.toggle("visible-form");
-  console.log("sign in form is now visible");
+  console.log("signin form is now visible");
 });
 
 // Landing page Sign Up

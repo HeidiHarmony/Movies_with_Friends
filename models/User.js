@@ -1,9 +1,3 @@
-
-
-
-module.exports = User;
-
-/* 
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
@@ -88,5 +82,6 @@ User.init(
     underscored: true,
     modelName: 'user',
   }
+); 
 
-); */
+module.exports = User;
