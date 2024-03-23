@@ -1572,8 +1572,7 @@
   {
     title: 'A Unicorn for Christmas',
     year: 'N/A',
-    overview: 'A young girl discovers a real-life unicorn at a Christmas carnival and must protect it from a greedy fair owner who sees 
-  it as a way to make a fortune.',
+    overview: 'A young girl discovers a real-life unicorn at a Christmas carnival and must protect it from a greedy fair owner who seesit as a way to make a fortune.',
     link: 'N/A',
     poster_url: null,
     genre_id: 14,
@@ -3000,6 +2999,7 @@
     vote_count: 0,
     winner: false
   },
+  {
   title: '12 Days of Giving',
   year: 'N/A',
   overview: "When Baxter Billings wins a small fortune at his local mall, he decides to become a Secret Santa to the people in his hometown. Along the way, Baxter forms a close friendship with Pamela and her young son Westin. He thinks he might be falling for Pamela... but there's one problem, he's already engaged! This Christmas, Baxter will have to choose between keeping promises and following his heart.",
@@ -3008,7 +3008,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: '12 Dog Days Till Christmas',
   year: 'N/A',
@@ -3018,7 +3018,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: '3 Bears Christmas',
   year: 'N/A',
@@ -3028,7 +3028,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: "32 Pills: My Sister's Suicide",
   year: 'N/A',
@@ -3038,7 +3038,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Chance in the World',
   year: 'N/A',
@@ -3048,7 +3048,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: "A Child's Christmas in Wales",
   year: 'N/A',
@@ -3058,7 +3058,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Dog of Flanders',
   year: 'N/A',
@@ -3068,7 +3068,7 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: "A Dog's Tale",
   year: 'N/A',
@@ -3078,18 +3078,17 @@
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Doggone Christmas',
   year: 'N/A',
-  overview: "A dog with telepathic abilities escapes a government lockdown and runs straight into the loving arms of two young brothers. But the Washington brass won't give up their secret weapon that easily. These spunky two boys must channel the spirit of Christmas 
-to save their gifted canine friend.",
+  overview: "A dog with telepathic abilities escapes a government lockdown and runs straight into the loving arms of two young brothers. But the Washington brass won't give up their secret weapon that easily. These spunky two boys must channel the spirit of Christmas to save their gifted canine friend.",
   link: 'N/A',
   poster_url: null,
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: "A Dogwalker's Christmas Tale",
   year: 'N/A',
@@ -3099,7 +3098,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Fish Tale',
   year: 'N/A',
@@ -3109,7 +3108,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Heartland Christmas',
   year: 'N/A',
@@ -3119,7 +3118,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Holiday Heist',
   year: 'N/A',
@@ -3129,7 +3128,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Horse for Summer',
   year: 'N/A',
@@ -3139,7 +3138,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Merry Mirthworm Christmas',
   year: 'N/A',
@@ -3149,7 +3148,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Miracle on Christmas Lake',
   year: 'N/A',
@@ -3159,7 +3158,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Snow White Christmas',
   year: 'N/A',
@@ -3169,7 +3168,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Sunday Horse',
   year: 'N/A',
@@ -3179,7 +3178,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: "A Turtle's Tale 2: Sammy's Escape from Paradise",
   year: 'N/A',
@@ -3189,7 +3188,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: "A Turtle's Tale: Sammy's Adventures",
   year: 'N/A',
@@ -3199,7 +3198,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Unicorn for Christmas',
   year: 'N/A',
@@ -3209,7 +3208,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'A Year in Burgundy',
   year: 'N/A',
@@ -3219,7 +3218,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'Abigail',
   year: 'N/A',
@@ -3229,7 +3228,7 @@ to save their gifted canine friend.",
   genre_id: 10751,
   vote_count: 0,
   winner: false
-}
+},
 {
   title: 'About Scout',
   year: 'N/A',
