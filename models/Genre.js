@@ -16,6 +16,18 @@ Genre.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    genre_code: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    month_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: "calendar",
+        key: "id",
+      },
+    }
   },
   {
     sequelize,
