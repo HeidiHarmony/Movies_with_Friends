@@ -1,3 +1,5 @@
+// This script is used to fetch movies from the RapidAPI Streaming Availability API, for use of seeding the Movie table upfront. The genre_id is a constant that can be set equal to any valid genre id. For example, 10751 corresponds to the Family genre. The script is run in the terminal using the command node controllers/api/motn.js. The output is then copied and pasted into the seeds/moviesData.js file.
+
 const axios = require('axios');
 
 const genre_id = 10751;
