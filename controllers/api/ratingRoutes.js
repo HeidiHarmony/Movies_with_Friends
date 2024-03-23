@@ -1,7 +1,7 @@
 const Router = require("express").Router();
 const { where } = require("sequelize");
 const { Rating } = require("../../models");
-const withAuth = require("../../utilities/auth");
+
 
 Router.get("/:movieId", async (req, res) => {
   try {
@@ -15,52 +15,27 @@ Router.get("/:movieId", async (req, res) => {
     console.error(err);
     res.status(500).json(err);
   }
-});
+});''
 
-// Router.get('/:id', async (req, res) => {
-//     try {
-//         const ratingData = await Ratings.findByPk(req.params.id);
-//         if (!ratingData) {
-//             res.status(404).json({ message: 'No rating found with this id!' });
-//             return;
-//         }
-//         res.status(200).json(ratingData);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
-
-
-Router.post("/:movieId/:userId", async (req, res) => {
+// Add a user's rating
+app.post('/update-rating/:userId', async (req, res) => {
   try {
-    const newRating = await Rating.create({
-      ...req.body,
-      movieId: req.params.movieId,
-      userId: req.params.userId
-    });
-    res.status(200).json(newRating);
-  } catch (err) {
-    res.status(400).json(err);
+    const userId = req.params.user_id;
+    const rating = await Rating.findOne({ where: { user_id: userId } });
+    const averageRating =
+      (rating.rating_originality +
+        rating.rating_entertainment +
+        rating.rating_cinematography +
+        rating.rating_acting +
+        rating.rating_storytelling) /
+      5;
+    rating.user_average_rating = averageRating;
+    await rating.save();
+    res.json({ message: 'Rating updated successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred while updating the rating' });
   }
 });
 
-
-Router.delete("/:id", async (req, res) => {
-  try {
-    const ratingData = await Ratings.destroy({
-      where: {
-        id: req.params.id,
-        // user_id: req.session.user_id,
-      },
-    });
-    if (!ratingData) {
-      res.status(404).json({ message: "No rating found with this id!" });
-      return;
-    }
-    res.status(200).json(ratingData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 module.exports = Router;

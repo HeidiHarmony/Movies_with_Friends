@@ -29,14 +29,54 @@ Rating.init(
         key: "id",
       },
     },
-    rating: {
+    rating_originality: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
+    },
+    rating_entertainment: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
+    },
+    rating_cinematography: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
+    },
+    rating_acting: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
+    },
+    rating_storytelling: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: 1,
+        max: 5,
+      },
+    user_average_rating: {
+      type: DataTypes.FLOAT,
+      allowNull: true,
+      },
     },
   },
   {
     sequelize,
-    timestamps: true;
+    timestamps: true,
     underscored: true,
     modelName: "rating",
     tableName: "ratings",
