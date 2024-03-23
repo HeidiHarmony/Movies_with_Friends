@@ -1,24 +1,19 @@
-
-
-
-module.exports = Rating;
-
-/* const { DataTypes, Model } = require("sequelize");
+const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 
+
 class Rating extends Model {
-  // checkPassword(loginPw) {
-  //   return bcrypt.compareSync(loginPw, this.password);
-  // }
+  
 }
 Rating.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    movieId: {
+    movie_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       reference: {
@@ -26,7 +21,7 @@ Rating.init(
         key: "id",
       },
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       reference: {
@@ -34,24 +29,20 @@ Rating.init(
         key: "id",
       },
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    review: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
   },
   {
     sequelize,
-    tableName: "ratings",
-    timestamps: false,
+    timestamps: true;
     underscored: true,
-  }
+    modelName: "rating",
+    tableName: "ratings",
+  freezeTableName: true,
+  } 
 );
- */
+
+module.exports = Rating;
+

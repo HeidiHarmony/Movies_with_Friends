@@ -19,9 +19,13 @@ Genre.init(
   },
   {
     sequelize,
-    tableName: "genres",
     timestamps: false,
     underscored: true,
+    modelName: "genre",
+    tableName: "genres",
+    timestamps: false,
+    freezeTableName: true,
+    
   }
 ); 
 
