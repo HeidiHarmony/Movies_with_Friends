@@ -16,12 +16,15 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    release_year: {
+    year: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    // Comment out if not used
-    trailer_url: {
+    overview: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    link: {
       type: DataTypes.STRING,
       allowNull: true, 
     },
@@ -40,10 +43,12 @@ Movie.init(
     vote_count: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
     winner: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: false,
     },
   },
   {

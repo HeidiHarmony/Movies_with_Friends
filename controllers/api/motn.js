@@ -1,45 +1,46 @@
-console.log('hello world');
+const axios = require('axios');
 
-//button that once clicked will give a list of genres 
-  
-const url = 'https://moviesminidatabase.p.rapidapi.com/genres/';
+const genre_id = 99;
+
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'e0fd7191d3msh744fc8740a01ac7p1081e7jsn8cd0c4f9b596',
-		'X-RapidAPI-Host': 'moviesminidatabase.p.rapidapi.com'
-	}
-};
-//grabs all countries and streaming services from database
-fetch(url, options)
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-  console.log(data)    
-}); 
-
-function randomMovies(data) {
-    for (i = 0; i < 2; i++) {
-        var randomMovies = Math.floor(Math.random() * 50);
-
-        console.log(data.results[randomMovies].title);
-    }};
-
-const urlGenres = 'https://streaming-availability.p.rapidapi.com/genres';
-const optionsGenres = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'e0fd7191d3msh744fc8740a01ac7p1081e7jsn8cd0c4f9b596',
-		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-	}
+  method: 'GET',
+  url: 'https://streaming-availability.p.rapidapi.com/search/filters',
+  params: {
+    country: 'us',
+    services: 'peacock.free',
+    show_type: 'movie',
+    genres_relation: 'and',
+    genres: genre_id,
+    order_by: 'original_title',
+    output_language: 'en'
+  },
+  headers: {
+    'X-RapidAPI-Key': '3ee6abd259mshe4e3d4ce6055519p19b872jsn1cdfd945db55',
+    'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+  }
 };
 
-//grabs all genres from database
-fetch(urlGenres, optionsGenres)
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-  console.log(data)    
-}); 
+async function fetchMovies() {
+  try {
+    const response = await axios.request(options);
+    const movies = response.data.result;
+    for (let movie of movies) {
+      const year = movie.release_dates && movie.release_dates.US ? movie.release_dates.US.theater || movie.release_dates.US.digital : 'N/A';
+      const link = movie.streaming_info && movie.streaming_info.us ? movie.streaming_info.us.link : 'N/A';
+      console.log({
+        title: movie.title,
+        year: year,
+        overview: movie.overview,
+        link: link,
+        poster_url: null, 
+        genre_id: genre_id, 
+        vote_count: 0,
+        winner: false
+      });
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchMovies();
