@@ -112,9 +112,7 @@
   {
     title: 'A Good Marriage',
     year: 'N/A',
-    overview: "Thinking bad things only happen to others, Darcy soon finds out the truth as she uncovers a gruesome truth about her husband that suddenly makes the outside world frightening real. Realising that her husband is not who she thought he was, his sinister secret threatening not 
-  only their marriage but also her life, will Darcy survive the dark truth that is so horrific it 
-  can't be real?",
+    overview: "Thinking bad things only happen to others, Darcy soon finds out the truth as she uncovers a gruesome truth about her husband that suddenly makes the outside world frightening real. Realising that her husband is not who she thought he was, his sinister secret threatening not only their marriage but also her life, will Darcy survive the dark truth that is so horrific it can't be real?",
     link: 'N/A',
     poster_url: null,
     genre_id: 28,
@@ -124,8 +122,7 @@
   {
     title: 'AE: Apocalypse Earth',
     year: 'N/A',
-    overview: 'When Earth is invaded by a militant alien race, civilians are loaded into arc-like 
-  space ships to flee to habitable planets beyond the galaxy. One group of survivors land on a mysterious and, seemingly, alluring planet. Only to discover they re not alone and they d better adapt. Deadly alien predators await their every turn; giant lizards, terrestrial monsters and tribes of humanoid creatures.',
+    overview: 'When Earth is invaded by a militant alien race, civilians are loaded into arc-like space ships to flee to habitable planets beyond the galaxy. One group of survivors land on a mysterious and, seemingly, alluring planet. Only to discover they re not alone and they d better adapt. Deadly alien predators await their every turn; giant lizards, terrestrial monsters and tribes of humanoid creatures.',
     link: 'N/A',
     poster_url: null,
     genre_id: 28,
@@ -145,8 +142,7 @@
   {
     title: 'Abduction',
     year: 'N/A',
-    overview: 'Quinn steps out of a park fountain in Vietnam with no recollection of who he is or 
-  where he came from. As he wanders through the city, piecing together clues to his past, he is relentlessly pursued by mysteriously dangerous figures.',
+    overview: 'Quinn steps out of a park fountain in Vietnam with no recollection of who he is or where he came from. As he wanders through the city, piecing together clues to his past, he is relentlessly pursued by mysteriously dangerous figures.',
     link: 'N/A',
     poster_url: null,
     genre_id: 28,
@@ -446,8 +442,7 @@
   {
     title: 'Alice Cooper: Live from the Astroturf',
     year: 'N/A',
-    overview: 'After an entire year spent on the road, the “Paranormal Tour” ended in Paris, on December 7th, 2017 at the world renowned Olympia, a theatre that is iconic in the truest sense of the word. The Olympia, since opening in 1893, has witnessed changes in entertainment and pop culture for almost 130 years from the can-can through Édith Piaf to Johnny Hallyday and the Beatles and now… Alice Cooper! This 90 minute rock show is a journey through Alice Cooper’s timeless creations: classics like “Poison”, “School’s Out” and “No 
-  More Mr. Nice Guy” are alternated with hand-picked gems for the joy of true Cooper connoisseurs like “Pain”, “Woman of Mass Distraction” and “Paranoic Personality,” the first single from the album “Paranormal”. This concert captures a rock and roll show at its peak and is one of the best live releases by Alice Cooper, featuring his longtime band guitarists Nita Strauss, Tommy Henriksen and Ryan Roxie, bassist Chuck Garric and drummer Glen Sobel in front of an excited audience.',
+    overview: 'After an entire year spent on the road, the “Paranormal Tour” ended in Paris, on December 7th, 2017 at the world renowned Olympia, a theatre that is iconic in the truest sense of the word. The Olympia, since opening in 1893, has witnessed changes in entertainment and pop culture for almost 130 years from the can-can through Édith Piaf to Johnny Hallyday and the Beatles and now… Alice Cooper! This 90 minute rock show is a journey through Alice Cooper’s timeless creations: classics like “Poison”, “School’s Out” and “No More Mr. Nice Guy” are alternated with hand-picked gems for the joy of true Cooper connoisseurs like “Pain”, “Woman of Mass Distraction” and “Paranoic Personality,” the first single from the album “Paranormal”. This concert captures a rock and roll show at its peak and is one of the best live releases by Alice Cooper, featuring his longtime band guitarists Nita Strauss, Tommy Henriksen and Ryan Roxie, bassist Chuck Garric and drummer Glen Sobel in front of an excited audience.',
     link: 'N/A',
     poster_url: null,
     genre_id: 99,
@@ -697,8 +692,7 @@
   {
     title: 'Alice Cooper: Live from the Astroturf',
     year: 'N/A',
-    overview: 'After an entire year spent on the road, the “Paranormal Tour” ended in Paris, on December 7th, 2017 at the world renowned Olympia, a theatre that is iconic in the truest sense of the word. The Olympia, since opening in 1893, has witnessed changes in entertainment and pop culture for almost 130 years from the can-can through Édith Piaf to Johnny Hallyday and the Beatles and now… Alice Cooper! This 90 minute rock show is a journey through Alice Cooper’s timeless creations: classics like “Poison”, “School’s Out” and “No 
-  More Mr. Nice Guy” are alternated with hand-picked gems for the joy of true Cooper connoisseurs like “Pain”, “Woman of Mass Distraction” and “Paranoic Personality,” the first single from the album “Paranormal”. This concert captures a rock and roll show at its peak and is one of the best live releases by Alice Cooper, featuring his longtime band guitarists Nita Strauss, Tommy Henriksen and Ryan Roxie, bassist Chuck Garric and drummer Glen Sobel in front of an excited audience.',
+    overview: 'After an entire year spent on the road, the “Paranormal Tour” ended in Paris, on December 7th, 2017 at the world renowned Olympia, a theatre that is iconic in the truest sense of the word. The Olympia, since opening in 1893, has witnessed changes in entertainment and pop culture for almost 130 years from the can-can through Édith Piaf to Johnny Hallyday and the Beatles and now… Alice Cooper! This 90 minute rock show is a journey through Alice Cooper’s timeless creations: classics like “Poison”, “School’s Out” and “No More Mr. Nice Guy” are alternated with hand-picked gems for the joy of true Cooper connoisseurs like “Pain”, “Woman of Mass Distraction” and “Paranoic Personality,” the first single from the album “Paranormal”. This concert captures a rock and roll show at its peak and is one of the best live releases by Alice Cooper, featuring his longtime band guitarists Nita Strauss, Tommy Henriksen and Ryan Roxie, bassist Chuck Garric and drummer Glen Sobel in front of an excited audience.',
     link: 'N/A',
     poster_url: null,
     genre_id: 99,
@@ -755,34 +749,6 @@
     vote_count: 0,
     winner: false
   },
-  
-  tenib@DESKTOP-RTJK340 MINGW64 ~/bootcamp/Movies_with_Friends/controllers/api (main)
-  $ git add -A
-  
-  tenib@DESKTOP-RTJK340 MINGW64 ~/bootcamp/Movies_with_Friends/controllers/api (main)
-  $ git commit -m "Major breakthrough! Got motn.js to return results by changing the genre_id constant to the value of their id and use 
-  it in the call and the returned data to use for seeding."
-  [main fe7b76e] Major breakthrough! Got motn.js to return results by changing the genre_id constant to the value of their id and use it in the call and the returned data to use for seeding.
-   9 files changed, 4971 insertions(+), 157 deletions(-)
-   delete mode 100644 Seeds/VoteSeeds.js
-   create mode 100644 Seeds/calendarData.js
-   create mode 100644 Seeds/movieData.json
-  
-  tenib@DESKTOP-RTJK340 MINGW64 ~/bootcamp/Movies_with_Friends/controllers/api (main)
-  $ git push
-  Enter passphrase for key '/c/Users/tenib/.ssh/id_ed25519': 
-  Enumerating objects: 48, done.
-  Counting objects: 100% (48/48), done.
-  Delta compression using up to 8 threads
-  Compressing objects: 100% (35/35), done.
-  Writing objects: 100% (35/35), 20.86 KiB | 508.00 KiB/s, done.
-  Total 35 (delta 20), reused 0 (delta 0), pack-reused 0
-  remote: Resolving deltas: 100% (20/20), completed with 10 local objects.
-  To github.com:HeidiHarmony/Movies_with_Friends.git
-     13a5ff7..fe7b76e  main -> main
-  
-  tenib@DESKTOP-RTJK340 MINGW64 ~/bootcamp/Movies_with_Friends/controllers/api (main)
-  $ node motn.js
   {
     title: '#LoveSwag',
     year: 'N/A',
@@ -856,8 +822,7 @@
   {
     title: '2 Days in Paris',
     year: 'N/A',
-    overview: 'Two Days in Paris follows two days in the relationship of a New York based couple; a French photographer, Marion, and an 
-  American interior designer, Jack—as they attempt to re-infuse their relationship with romance by taking a vacation in Europe. Their trip to Venice hasn’t really worked out-Jack came down with gastroenteritis - but they have higher hopes for Paris. However, the combination of Marion’s overbearing non-English speaking parents, flirtatious ex-boyfriends, Jack’s obsession with photographing every famous Parisian tombstone and his conviction that French condoms are too small, only adds fuel to the fire. Will they be able to salvage their relationship? Will they ever have sex again? Or will they merely manage to perfect the art of arguing?',
+    overview: 'Two Days in Paris follows two days in the relationship of a New York based couple; a French photographer, Marion, and an American interior designer, Jack—as they attempt to re-infuse their relationship with romance by taking a vacation in Europe. Their trip to Venice hasn’t really worked out-Jack came down with gastroenteritis - but they have higher hopes for Paris. However, the combination of Marion’s overbearing non-English speaking parents, flirtatious ex-boyfriends, Jack’s obsession with photographing every famous Parisian tombstone and his conviction that French condoms are too small, only adds fuel to the fire. Will they be able to salvage their relationship? Will they ever have sex again? Or will they merely manage to perfect the art of arguing?',
     link: 'N/A',
     poster_url: null,
     genre_id: 35,
@@ -897,8 +862,7 @@
   {
     title: '4th Man Out',
     year: 'N/A',
-    overview: 'After celebrating his 24th birthday, Adam - a small-town mechanic - decides to tell his three friends and his family tha t
-   he is gay.',
+    overview: 'After celebrating his 24th birthday, Adam - a small-town mechanic - decides to tell his three friends and his family that he is gay.',
     link: 'N/A',
     poster_url: null,
     genre_id: 35,
@@ -958,8 +922,7 @@
   {
     title: "A Dogwalker's Christmas Tale",
     year: 'N/A',
-    overview: "Luce is a college student who gets a holiday job caring for a land developer's dog, but then she meets an attractive guy 
-  who is protesting her boss's plan to tear down their local dog park and turn it into a spa.",
+    overview: "Luce is a college student who gets a holiday job caring for a land developer's dog, but then she meets an attractive guy who is protesting her boss's plan to tear down their local dog park and turn it into a spa.",
     link: 'N/A',
     poster_url: null,
     genre_id: 35,
@@ -1029,8 +992,7 @@
   {
     title: 'A Long Way Down',
     year: 'N/A',
-    overview: "In this touching comedy, four strangers decide to end it all on New Year's Eve. But when they meet by chance on a London 
-  rooftop, they agree to halt their plans for six weeks. They soon discover that even accidental families make life worth living.",     
+    overview: "In this touching comedy, four strangers decide to end it all on New Year's Eve. But when they meet by chance on a London rooftop, they agree to halt their plans for six weeks. They soon discover that even accidental families make life worth living.",     
     link: 'N/A',
     poster_url: null,
     genre_id: 35,
@@ -1040,8 +1002,7 @@
   {
     title: '40 Days and Nights',
     year: 'N/A',
-    overview: 'When a colossal tectonic shift causes the sea level to start rising, a microbiologist gathers the DNA of as many species 
-  as she can, while the military creates an "ark" in a desperate attempt to preserve life on Earth.',
+    overview: 'When a colossal tectonic shift causes the sea level to start rising, a microbiologist gathers the DNA of as many species as she can, while the military creates an "ark" in a desperate attempt to preserve life on Earth.',
     link: 'N/A',
     poster_url: null,
     genre_id: 878,
@@ -1051,8 +1012,7 @@
   {
     title: 'AE: Apocalypse Earth',
     year: 'N/A',
-    overview: 'When Earth is invaded by a militant alien race, civilians are loaded into arc-like space ships to flee to habitable planets beyond the galaxy. One group of survivors land on a mysterious and, seemingly, alluring planet. Only to discover they re not alone 
-  and they d better adapt. Deadly alien predators await their every turn; giant lizards, terrestrial monsters and tribes of humanoid creatures.',
+    overview: 'When Earth is invaded by a militant alien race, civilians are loaded into arc-like space ships to flee to habitable planets beyond the galaxy. One group of survivors land on a mysterious and, seemingly, alluring planet. Only to discover they re not alone and they\'d better adapt. Deadly alien predators await their every turn; giant lizards, terrestrial monsters and tribes of humanoid creatures.',
     link: 'N/A',
     poster_url: null,
     genre_id: 878,
@@ -1232,8 +1192,7 @@
   {
     title: 'Body Bags',
     year: 'N/A',
-    overview: 'Three short stories in the horror genre. The first about a serial killer. The second about a hair transplant gone wrong. 
-  The third about a baseball player.',
+    overview: 'Three short stories in the horror genre. The first about a serial killer. The second about a hair transplant gone wrong. The third about a baseball player.',
     link: 'N/A',
     poster_url: null,
     genre_id: 878,
@@ -1283,8 +1242,7 @@
   {
     title: 'Chopping Mall',
     year: 'N/A',
-    overview: 'In this slasher favorite, eight teenagers are trapped in a high tech shopping mall, pursued by killbots.  Two weeks ago, 
-  Park Plaza Mall installed the perfect security system. Nothing could go wrong. That is until four teenage couples find themselves trapped with the three armed, short-circuiting robots.',
+    overview: 'In this slasher favorite, eight teenagers are trapped in a high tech shopping mall, pursued by killbots.  Two weeks ago, Park Plaza Mall installed the perfect security system. Nothing could go wrong. That is until four teenage couples find themselves trapped with the three armed, short-circuiting robots.',
     link: 'N/A',
     poster_url: null,
     genre_id: 878,
@@ -1324,8 +1282,7 @@
   {
     title: '10x10',
     year: 'N/A',
-    overview: 'After meticulous planning, Lewis snatches Cathy off the busy streets and takes her to a remote luxury house, locking her 
-  away in a soundproofed room measuring 10 feet by 10 feet.',
+    overview: 'After meticulous planning, Lewis snatches Cathy off the busy streets and takes her to a remote luxury house, locking her away in a soundproofed room measuring 10 feet by 10 feet.',
     link: 'N/A',
     poster_url: null,
     genre_id: 53,
@@ -1355,8 +1312,7 @@
   {
     title: '1BR',
     year: 'N/A',
-    overview: 'After leaving behind a painful past, Sarah scores the perfect Hollywood apartment only to discover that her surprisingly 
-  welcoming neighbors may harbor a dangerous secret.',
+    overview: 'After leaving behind a painful past, Sarah scores the perfect Hollywood apartment only to discover that her surprisingly welcoming neighbors may harbor a dangerous secret.',
     link: 'N/A',
     poster_url: null,
     genre_id: 53,
@@ -1426,8 +1382,7 @@
   {
     title: 'Eyes of the Dead',
     year: 'N/A',
-    overview: "After a plague of zombies invades a family's once-peaceful hometown, the havoc they wreak is deadly. Eyes of the Dead is 
-  a zombie thriller that immerses the audience in a pulse-pounding, innovative survival experience. Relying heavily on practical special effects and a POV perspective, what you see on camera is what was filmed on that fateful day of the zombie invasion.",
+    overview: "After a plague of zombies invades a family's once-peaceful hometown, the havoc they wreak is deadly. Eyes of the Dead is a zombie thriller that immerses the audience in a pulse-pounding, innovative survival experience. Relying heavily on practical special effects and a POV perspective, what you see on camera is what was filmed on that fateful day of the zombie invasion.",
     link: 'N/A',
     poster_url: null,
     genre_id: 53,
@@ -1537,8 +1492,7 @@
   {
     title: 'Abduction of Angie',
     year: 'N/A',
-    overview: "Paramedic Miranda faces an emergency of her own when her 8-year-old daughter Angie is kidnapped by Miranda's estranged father Luke.Luke is dangerous to others, and has killed in the past. He's now ready to do anything to reunite his family. Miranda gives 
-  chase, and uncovers secrets from her own childhood to discover what Luke's plan is, to confront him and take back her abducted daughter.",
+    overview: "Paramedic Miranda faces an emergency of her own when her 8-year-old daughter Angie is kidnapped by Miranda's estranged father Luke.Luke is dangerous to others, and has killed in the past. He's now ready to do anything to reunite his family. Miranda gives chase, and uncovers secrets from her own childhood to discover what Luke's plan is, to confront him and take back her abducted daughter.",
     link: 'N/A',
     poster_url: null,
     genre_id: 53,
@@ -1629,9 +1583,7 @@
   {
     title: 'Above the Shadows',
     year: 'N/A',
-    overview: 'Holly is a young woman who has faded to the point of becoming invisible and must find her way back into the world. After 
-  more than a decade of solitude and living in the shadows as a paparazzi photographer, Holly meets Shane the one man who can see her, Shayne, a down on his luck MMA fighter. With Shayne, Holly awakens to love and that she bears more responsibility for her fate than se 
-   imagined.',
+    overview: 'Holly is a young woman who has faded to the point of becoming invisible and must find her way back into the world. After more than a decade of solitude and living in the shadows as a paparazzi photographer, Holly meets Shane the one man who can see her, Shayne, a down on his luck MMA fighter. With Shayne, Holly awakens to love and that she bears more responsibility for her fate than she imagined.',
     link: 'N/A',
     poster_url: null,
     genre_id: 14,
@@ -1641,8 +1593,7 @@
   {
     title: 'After the Wizard',
     year: 'N/A',
-    overview: 'A 12-year-old Kansas orphan turns to the Scarecrow and the Tin Woodman for help during a difficult time. Things have not 
-  gone well in Oz since the Wizard left, the Scarecrow and the Tin Woodman must travel to Kansas to find Dorothy',
+    overview: 'A 12-year-old Kansas orphan turns to the Scarecrow and the Tin Woodman for help during a difficult time. Things have not gone well in Oz since the Wizard left, the Scarecrow and the Tin Woodman must travel to Kansas to find Dorothy',
     link: 'N/A',
     poster_url: null,
     genre_id: 14,
@@ -1752,8 +1703,7 @@
   {
     title: 'Blaze',
     year: 'N/A',
-    overview: 'After accidentally witnessing a violent crime, a young girl is left catatonic with shock, and struggles to make sense of 
-  what she saw, ultimately finding renewal in the inestimable world of her own imagination.',
+    overview: 'After accidentally witnessing a violent crime, a young girl is left catatonic with shock, and struggles to make sense of what she saw, ultimately finding renewal in the inestimable world of her own imagination.',
     link: 'N/A',
     poster_url: null,
     genre_id: 14,
@@ -1793,8 +1743,7 @@
   {
     title: 'Cinderella',
     year: 'N/A',
-    overview: "A sparkling fantasy of music, magic and romance, Rodgers & Hammerstein's Cinderella captivates from overture to finale with a delightful score and stunning flittering performances from an all-star cast. Cinderella will waltz into the hearts of the entire 
-  family and live happily ever after as one of the most irresistible musicals ever made.",
+    overview: "A sparkling fantasy of music, magic and romance, Rodgers & Hammerstein's Cinderella captivates from overture to finale with a delightful score and stunning flittering performances from an all-star cast. Cinderella will waltz into the hearts of the entire family and live happily ever after as one of the most irresistible musicals ever made.",
     link: 'N/A',
     poster_url: null,
     genre_id: 14,
@@ -1844,8 +1793,7 @@
   {
     title: 'Big Kill',
     year: 'N/A',
-    overview: 'A tenderfoot from Philadelphia, two misfit gamblers on the run, and a deadly preacher have a date with destiny in a boom 
-  town gone bust called Big Kill.',
+    overview: 'A tenderfoot from Philadelphia, two misfit gamblers on the run, and a deadly preacher have a date with destiny in a boom town gone bust called Big Kill.',
     link: 'N/A',
     poster_url: null,
     genre_id: 37,
@@ -1865,8 +1813,7 @@
   {
     title: 'Cat Ballou',
     year: 'N/A',
-    overview: `The sleeper hit of 1965, CAT BALLOU was declared an instant classic when its sly blend of Western parody and rapid-fire action hit the screen. Lee Marvin won an Oscar' for Best Supporting Actor in his dual role as both Tim Strawn, a noseless ("it got bit 
-  off in a fight") gunslinger, and as Kid Shelleen, the woozy, boozy, has-been who goes up against Strawn at high noon. In accepting the award, ..`,
+    overview: `The sleeper hit of 1965, CAT BALLOU was declared an instant classic when its sly blend of Western parody and rapid-fire action hit the screen. Lee Marvin won an Oscar' for Best Supporting Actor in his dual role as both Tim Strawn, a noseless ("it got bit off in a fight") gunslinger, and as Kid Shelleen, the woozy, boozy, has-been who goes up against Strawn at high noon. In accepting the award, ..`,
     link: 'N/A',
     poster_url: null,
     genre_id: 37,
@@ -1986,8 +1933,7 @@
   {
     title: 'Hickok',
     year: 'N/A',
-    overview: 'In hopes of escaping his past as gunslinger and outlaw, "Wild Bill" Hickok has drifted to Abilene, Kansas to start a new 
-  life as town marshall. His efforts are challenged when saloon owner Poe attempts to destroy him and the town he calls home.',
+    overview: 'In hopes of escaping his past as gunslinger and outlaw, "Wild Bill" Hickok has drifted to Abilene, Kansas to start a new life as town marshall. His efforts are challenged when saloon owner Poe attempts to destroy him and the town he calls home.',
     link: 'N/A',
     poster_url: null,
     genre_id: 37,
@@ -2047,8 +1993,7 @@
   {
     title: 'Stagecoach: The Texas Jack Story',
     year: 'N/A',
-    overview: 'Nathaniel Reed has left the outlaw life and settled down with a family until a US Marshal with a grudge hatches a revenge plot that forces Reed out of retirement. Reed returns to his criminal ways and becomes known as Texas Jack; one of the most infamous 
-  stagecoach robbers in history. Based on a true story.',
+    overview: 'Nathaniel Reed has left the outlaw life and settled down with a family until a US Marshal with a grudge hatches a revenge plot that forces Reed out of retirement. Reed returns to his criminal ways and becomes known as Texas Jack; one of the most infamous stagecoach robbers in history. Based on a true story.',
     link: 'N/A',
     poster_url: null,
     genre_id: 37,
@@ -2088,8 +2033,7 @@
   {
     title: '1BR',
     year: 'N/A',
-    overview: 'After leaving behind a painful past, Sarah scores the perfect Hollywood apartment only to discover that her surprisingly 
-  welcoming neighbors may harbor a dangerous secret.',
+    overview: 'After leaving behind a painful past, Sarah scores the perfect Hollywood apartment only to discover that her surprisingly welcoming neighbors may harbor a dangerous secret.',
     link: 'N/A',
     poster_url: null,
     genre_id: 27,
@@ -2139,8 +2083,7 @@
   {
     title: 'Eyes of the Dead',
     year: 'N/A',
-    overview: "After a plague of zombies invades a family's once-peaceful hometown, the havoc they wreak is deadly. Eyes of the Dead is 
-  a zombie thriller that immerses the audience in a pulse-pounding, innovative survival experience. Relying heavily on practical special effects and a POV perspective, what you see on camera is what was filmed on that fateful day of the zombie invasion.",
+    overview: "After a plague of zombies invades a family's once-peaceful hometown, the havoc they wreak is deadly. Eyes of the Dead is a zombie thriller that immerses the audience in a pulse-pounding, innovative survival experience. Relying heavily on practical special effects and a POV perspective, what you see on camera is what was filmed on that fateful day of the zombie invasion.",
     link: 'N/A',
     poster_url: null,
     genre_id: 27,
@@ -2160,8 +2103,7 @@
   {
     title: 'A Demon Within',
     year: 'N/A',
-    overview: "In 1914, Crestwick, a demonic spirit named Nefas surfaced to prey on a family, which ended with the death of an innocent 
-  young girl. The events haunted the mid-western community for years. Now, decades later, a skeptical doctor must stop history from repeating itself by confronting his personal demons and fighting to save a teenage girl who has become possessed in his family's old house.",
+    overview: "In 1914, Crestwick, a demonic spirit named Nefas surfaced to prey on a family, which ended with the death of an innocent young girl. The events haunted the mid-western community for years. Now, decades later, a skeptical doctor must stop history from repeating itself by confronting his personal demons and fighting to save a teenage girl who has become possessed in his family's old house.",
     link: 'N/A',
     poster_url: null,
     genre_id: 27,
@@ -2241,8 +2183,7 @@
   {
     title: 'Always Shine',
     year: 'N/A',
-    overview: 'Two friends, both actresses, leave Los Angeles for Big Sur for a weekend getaway to reconnect. Once alone, however, the two women’s suppressed jealousies and deep-seated resentments bubble to the surface, causing them to lose grasp of their relationshipa 
-  nd identities.',
+    overview: 'Two friends, both actresses, leave Los Angeles for Big Sur for a weekend getaway to reconnect. Once alone, however, the two women’s suppressed jealousies and deep-seated resentments bubble to the surface, causing them to lose grasp of their relationship and identities.',
     link: 'N/A',
     poster_url: null,
     genre_id: 27,
@@ -2322,8 +2263,7 @@
   {
     title: '10 Reasons Why Men Cheat',
     year: 'N/A',
-    overview: 'In the wake of a wedding catastrophe, three couples discover the meaning of commitment, while discussing what women want 
-  to know most of all when it comes to men and relationships. Why do men cheat?',
+    overview: 'In the wake of a wedding catastrophe, three couples discover the meaning of commitment, while discussing what women want to know most of all when it comes to men and relationships. Why do men cheat?',
     link: 'N/A',
     poster_url: null,
     genre_id: 10749,
@@ -2343,8 +2283,7 @@
   {
     title: '2 Days in Paris',
     year: 'N/A',
-    overview: 'Two Days in Paris follows two days in the relationship of a New York based couple; a French photographer, Marion, and an 
-  American interior designer, Jack—as they attempt to re-infuse their relationship with romance by taking a vacation in Europe. Their trip to Venice hasn’t really worked out-Jack came down with gastroenteritis - but they have higher hopes for Paris. However, the combination of Marion’s overbearing non-English speaking parents, flirtatious ex-boyfriends, Jack’s obsession with photographing every famous Parisian tombstone and his conviction that French condoms are too small, only adds fuel to the fire. Will they be able to salvage their relationship? Will they ever have sex again? Or will they merely manage to perfect the art of arguing?',
+    overview: 'Two Days in Paris follows two days in the relationship of a New York based couple; a French photographer, Marion, and an American interior designer, Jack—as they attempt to re-infuse their relationship with romance by taking a vacation in Europe. Their trip to Venice hasn’t really worked out-Jack came down with gastroenteritis - but they have higher hopes for Paris. However, the combination of Marion’s overbearing non-English speaking parents, flirtatious ex-boyfriends, Jack’s obsession with photographing every famous Parisian tombstone and his conviction that French condoms are too small, only adds fuel to the fire. Will they be able to salvage their relationship? Will they ever have sex again? Or will they merely manage to perfect the art of arguing?',
     link: 'N/A',
     poster_url: null,
     genre_id: 10749,
@@ -2454,8 +2393,7 @@
   {
     title: 'A Date with Miss Fortune',
     year: 'N/A',
-    overview: 'When a struggling writer meets a superstitious Portuguese beauty, he has no idea that his life and luck are both about t o
-   change. A romantic comedy about cross-cultural relationships.',
+    overview: 'When a struggling writer meets a superstitious Portuguese beauty, he has no idea that his life and luck are both about to change. A romantic comedy about cross-cultural relationships.',
     link: 'N/A',
     poster_url: null,
     genre_id: 10749,
@@ -2465,8 +2403,7 @@
   {
     title: 'A Demon Within',
     year: 'N/A',
-    overview: "In 1914, Crestwick, a demonic spirit named Nefas surfaced to prey on a family, which ended with the death of an innocent 
-  young girl. The events haunted the mid-western community for years. Now, decades later, a skeptical doctor must stop history from repeating itself by confronting his personal demons and fighting to save a teenage girl who has become possessed in his family's old house.",
+    overview: "In 1914, Crestwick, a demonic spirit named Nefas surfaced to prey on a family, which ended with the death of an innocent young girl. The events haunted the mid-western community for years. Now, decades later, a skeptical doctor must stop history from repeating itself by confronting his personal demons and fighting to save a teenage girl who has become possessed in his family's old house.",
     link: 'N/A',
     poster_url: null,
     genre_id: 10749,
@@ -2526,8 +2463,7 @@
   {
     title: 'A Perfect Christmas Pairing',
     year: 'N/A',
-    overview: "While hiding out at her family's winery B&B following a bad review, top chef Grace collides with a worldly travel writer 
-  who helps her appreciate her family's Christmas traditions and rediscover her roots.",
+    overview: "While hiding out at her family's winery B&B following a bad review, top chef Grace collides with a worldly travel writer who helps her appreciate her family's Christmas traditions and rediscover her roots.",
     link: 'N/A',
     poster_url: null,
     genre_id: 10749,
@@ -2567,8 +2503,7 @@
   {
     title: '10x10',
     year: 'N/A',
-    overview: 'After meticulous planning, Lewis snatches Cathy off the busy streets and takes her to a remote luxury house, locking her 
-  away in a soundproofed room measuring 10 feet by 10 feet.',
+    overview: 'After meticulous planning, Lewis snatches Cathy off the busy streets and takes her to a remote luxury house, locking her away in a soundproofed room measuring 10 feet by 10 feet.',
     link: 'N/A',
     poster_url: null,
     genre_id: 9648,
@@ -2738,8 +2673,7 @@
   {
     title: 'Blackway',
     year: 'N/A',
-    overview: 'A young woman returns to her home town in the Pacific Northwest and finds herself harassed and stalked by a former cop t u
-  rned crime lord. She recruits an ex-logger and his sidekick to help take a stand against her stalker.',
+    overview: 'A young woman returns to her home town in the Pacific Northwest and finds herself harassed and stalked by a former cop turned crime lord. She recruits an ex-logger and his sidekick to help take a stand against her stalker.',
     link: 'N/A',
     poster_url: null,
     genre_id: 9648,
@@ -2749,8 +2683,7 @@
   {
     title: 'Bleeding Heart',
     year: 'N/A',
-    overview: "Yoga instructor May, after recently discovering her biological sister, Shiva, finds herself behaving in ways she'd never 
-  imagined herself capable of to protect her sister from a dangerous and toxic boyfriend.",
+    overview: "Yoga instructor May, after recently discovering her biological sister, Shiva, finds herself behaving in ways she'd never imagined herself capable of to protect her sister from a dangerous and toxic boyfriend.",
     link: 'N/A',
     poster_url: null,
     genre_id: 9648,
@@ -2780,8 +2713,7 @@
   {
     title: 'Bordertown',
     year: 'N/A',
-    overview: 'Chicago reporter, Lauren Adrian, travels to Mexico to break the silence surrounding the unsolved deaths of hundreds of women near an American-owned factory. Jennifer Lopez (Hustlers, Second Act) stars in this action-packed story of corporate corruption n 
-  d buried secrets, alongside Antonio Banderas (Desperado, The Legend of Zorro) and Golden Globe Winner Martin Sheen (Apocalypse Now, The Way).',
+    overview: 'Chicago reporter, Lauren Adrian, travels to Mexico to break the silence surrounding the unsolved deaths of hundreds of women near an American-owned factory. Jennifer Lopez (Hustlers, Second Act) stars in this action-packed story of corporate corruption and buried secrets, alongside Antonio Banderas (Desperado, The Legend of Zorro) and Golden Globe Winner Martin Sheen (Apocalypse Now, The Way).',
     link: 'N/A',
     poster_url: null,
     genre_id: 9648,
@@ -2831,8 +2763,7 @@
   {
     title: '16 Stones',
     year: 'N/A',
-    overview: 'A young man in the late 1830s witnesses destruction and loss suffered by Latter-day Saints in Missouri and sets off with 
-  two friends to prove that the Book of Mormon is theological by finding an unimpeachable artifact.',
+    overview: 'A young man in the late 1830s witnesses destruction and loss suffered by Latter-day Saints in Missouri and sets off with  two friends to prove that the Book of Mormon is theological by finding an unimpeachable artifact.',
     link: 'N/A',
     poster_url: null,
     genre_id: 12,
@@ -2892,8 +2823,7 @@
   {
     title: '40 Days and Nights',
     year: 'N/A',
-    overview: 'When a colossal tectonic shift causes the sea level to start rising, a microbiologist gathers the DNA of as many species 
-  as she can, while the military creates an "ark" in a desperate attempt to preserve life on Earth.',
+    overview: 'When a colossal tectonic shift causes the sea level to start rising, a microbiologist gathers the DNA of as many species as she can, while the military creates an "ark" in a desperate attempt to preserve life on Earth.',
     link: 'N/A',
     poster_url: null,
     genre_id: 12,
@@ -2983,8 +2913,7 @@
   {
     title: 'AE: Apocalypse Earth',
     year: 'N/A',
-    overview: 'When Earth is invaded by a militant alien race, civilians are loaded into arc-like space ships to flee to habitable planets beyond the galaxy. One group of survivors land on a mysterious and, seemingly, alluring planet. Only to discover they re not alone 
-  and they d better adapt. Deadly alien predators await their every turn; giant lizards, terrestrial monsters and tribes of humanoid creatures.',
+    overview: 'When Earth is invaded by a militant alien race, civilians are loaded into arc-like space ships to flee to habitable planets beyond the galaxy. One group of survivors land on a mysterious and, seemingly, alluring planet. Only to discover they re not alone and they d better adapt. Deadly alien predators await their every turn; giant lizards, terrestrial monsters and tribes of humanoid creatures.',
     link: 'N/A',
     poster_url: null,
     genre_id: 12,
@@ -3004,8 +2933,7 @@
   {
     title: 'Accident Man',
     year: 'N/A',
-    overview: 'Mike Fallon, the Accident Man, is a stone cold killer. When a loved one is murdered by his own crew, Fallon is forced to 
-  avenge the one person who actually meant something to him.',
+    overview: 'Mike Fallon, the Accident Man, is a stone cold killer. When a loved one is murdered by his own crew, Fallon is forced to avenge the one person who actually meant something to him.',
     link: 'N/A',
     poster_url: null,
     genre_id: 12,
@@ -3165,8 +3093,7 @@ to save their gifted canine friend.",
 {
   title: "A Dogwalker's Christmas Tale",
   year: 'N/A',
-  overview: "Luce is a college student who gets a holiday job caring for a land developer's dog, but then she meets an attractive guy 
-who is protesting her boss's plan to tear down their local dog park and turn it into a spa.",
+  overview: "Luce is a college student who gets a holiday job caring for a land developer's dog, but then she meets an attractive guy who is protesting her boss's plan to tear down their local dog park and turn it into a spa.",
   link: 'N/A',
   poster_url: null,
   genre_id: 10751,
@@ -3186,8 +3113,7 @@ who is protesting her boss's plan to tear down their local dog park and turn it 
 {
   title: 'A Heartland Christmas',
   year: 'N/A',
-  overview: 'Amy, Ty, Jack and Tim sacrifice Christmas at Heartland to save starving horses in a remote mountain area. In the process 
-of a daring rescue, they manage to bring together a town and a family divided by a long ago tragedy.',
+  overview: 'Amy, Ty, Jack and Tim sacrifice Christmas at Heartland to save starving horses in a remote mountain area. In the process of a daring rescue, they manage to bring together a town and a family divided by a long ago tragedy.',
   link: 'N/A',
   poster_url: null,
   genre_id: 10751,
@@ -3277,8 +3203,7 @@ of a daring rescue, they manage to bring together a town and a family divided by
 {
   title: 'A Unicorn for Christmas',
   year: 'N/A',
-  overview: 'A young girl discovers a real-life unicorn at a Christmas carnival and must protect it from a greedy fair owner who sees 
-it as a way to make a fortune.',
+  overview: 'A young girl discovers a real-life unicorn at a Christmas carnival and must protect it from a greedy fair owner who sees it as a way to make a fortune.',
   link: 'N/A',
   poster_url: null,
   genre_id: 10751,
