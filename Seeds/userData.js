@@ -1,6 +1,4 @@
-const { User } = require("../models");
-
-const userSeeds = [
+[
   {
     first_name: "John",
     last_name: "Doe",
@@ -34,14 +32,16 @@ const userSeeds = [
     favorite_genres: "Comedy, Sci-Fi, Fantasy, Documentary",
     favorite_movies: "The Princess Bride, The Last Unicorn, Spider-man Across the Spiderverse, Fight Club, Flatliners",
     about_me: "I'm an artist, musician, and web development student. I love animals, crystals, and the color purple.",
+  },
+  {
+    first_name: "Myrtle",
+    last_name: "MacKenzie",
+    email: "groundcover19@gmail.com",
+    password: "hungryhungryhippo",
+    user_name: "MoaningMyrtle",
+    state: "Vermont",
+    favorite_genres: "Drama, Mystery, Fantasy",
+    favorite_movies: "Harry Potter, Lord of the Rings, The Others",
+    about_me: "I'm sad because people are mean to me so I haunt a bathroom. I'm also a ghost.",
   }
-
-  // Add more user objects as needed
-];
-
-const seedUsers = () =>
-  User.bulkCreate(userSeeds, {
-    individualHooks: true,
-  });
-
-module.exports = seedUsers;
+]
