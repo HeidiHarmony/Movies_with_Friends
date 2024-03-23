@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const genre_id = 99;
+const genre_id = 10751;
 
 const options = {
   method: 'GET',
