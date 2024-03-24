@@ -1,4 +1,3 @@
-
 const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../config/connection");
 
@@ -20,7 +19,7 @@ Genre.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    month_name: {
+    month_id: {
       type: DataTypes.STRING,
       allowNull: false,
       references: {

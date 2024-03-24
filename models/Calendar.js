@@ -28,14 +28,14 @@ Calendar.init(
             key: 'id',
           },
         },
-        movie_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'movie',
-                key: 'id',
-              },
+    movie_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'movie',
+            key: 'id',
             },
+        },
     date_nom_start: {
         type: DataTypes.DATE,
         allowNull: false,

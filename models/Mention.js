@@ -18,7 +18,7 @@ Mention.init(
             key: "id",
         },
     },
-    mentioned_user: {
+    mentioned_user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {

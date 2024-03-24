@@ -10,7 +10,7 @@ DiscussionBoard.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    month_name: {
+    month_id: {
       type: DataTypes.STRING,
       allowNull: false,
       references: {

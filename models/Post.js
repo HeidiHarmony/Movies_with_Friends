@@ -13,10 +13,16 @@ Post.init(
     title: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+            len: [1, 100],
+        },
     },
     content: {
         type: DataTypes.TEXT,
         allowNull: false,
+        validate: {
+            len: [1, 1500],
+        },
     },
     creation_date: {
         type: DataTypes.DATE,

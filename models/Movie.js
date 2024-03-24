@@ -40,12 +40,7 @@ Movie.init(
         key: 'id',
       },
     },
-    vote_count: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
-    winner: {
+    is_winner: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false,

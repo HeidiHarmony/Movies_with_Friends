@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 class Vote extends Model {
 }
 
-UserMovieVote.init(
+Vote.init(
 {
     id: {
         type: DataTypes.INTEGER,
