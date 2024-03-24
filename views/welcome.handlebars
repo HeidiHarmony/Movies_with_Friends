@@ -1,16 +1,12 @@
-<!--This file will serve as the welcome.handlebars. Including the main/index code so it will display-->
+ <!--WELCOME PAGE BEGINS-->
+<container class="has-text-light test">
 
-
-<body class="is-dark">
-<main id="main-body" class="has-text-light test">
-
-      <!--WELCOME PAGE BEGINS-->
-       <!-- Render the welcome.handlebars -->
-       
-      {{> user-header }}
-
-        <!--Group Stage-->
-       
+  <div id="header-holder" class="has-background-black">
+  <!-- Render the welcome.handlebars -->
+       {{> user-header-p }}
+  </div>
+    
+ <!--Group Activity-->
        <section class="section">
         <div class="container has-text-centered">
             <div class="is-centered is-vcentered">
@@ -20,14 +16,12 @@
                    
                     <p class="is-size-3 mb-5">Right now we are <span id="phase-display"></span></p>
                 
-                    <!--buttons to view calendar and interact with the group-->
+                    
                     <div id="welcome-buttons" class="has-text-weight-bold buttons is-centered">
-                       
+                       <!--Button to view calendar-->
                       <a id="show-calendar" class="button is-info is-outlined js-modal-trigger" data-target="calendarModal">View Calendar</a>
-                       
-           
+                    <!--Button to take an action in the current phase of activity: nominating, voting, or discussion-->
                       <a id="action-button" class="button is-warning"><span id="action-text"></span></a>
-    
                     </div>
                     <!--end buttons div-->
 
@@ -52,30 +46,17 @@
                       <p><a href="">February: <br /><strong>The Ark and the Darkness</strong></a></p>
                    </div>
                   </div>
-                   
                 </div>
-            </div>
-            </div>
-
-                </div>
+              </div>
             </div>
         </div>
+        <!--Modal to hold the Calendar partial****************************-->
+        <div id="calendarModal" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            {{> calendar-p}}
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+        <!--end group-calendar.handlebars ************************* -->
     </section>
-                
-      </main>
-  
-  <script src="/javascript/mwf-misc.js"></script>
-  <script src="/javascript/phase.js"></script>
-  <script src="https://kit.fontawesome.com/76aa510a07.js" crossorigin="anonymous"></script>
-
-  <!--Partial: Calendar Modal ****************************-->
-                    <!--{{{group-calendar}}} -->
-                    <div id="calendarModal" class="modal">
-                      <div class="modal-background"></div>
-                      <div class="modal-content">
-                        {{> calendar-p}}
-                      </div>
-                      <button class="modal-close is-large" aria-label="close"></button>
-                    </div>
-                    <!--end group-calendar.handlebars ************************* -->
-</body>
