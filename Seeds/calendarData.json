@@ -1,9 +1,6 @@
 [
     {
     "month_num": 1,
-    "month_name": "January",
-    "genre_id": "Action",
-    "movie_id": "Die Hard",
     "date_nom_start": "2024-01-01",
     "date_nom_end": "2024-01-05",
     "date_vote_start": "2024-01-06",

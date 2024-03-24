@@ -6,16 +6,26 @@ const DiscussionBoard = require("./DiscussionBoard");
 const Forum = require("./Forum");
 const Genre = require("./Genre");
 const Mention = require("./Mention");
+const Month = require("./Month");
 const Movie = require("./Movie");
 const Nomination = require("./Nomination");
 const Post = require("./Post");
-const Rating = require("./rating");
+const Rating = require("./Rating");
 const User = require("./User");
 const Vote = require("./Vote"); 
 
 // Associations
 
 // Calendar Aspect
+
+Calendar.hasMany(Month, {
+  foreignKey: 'calendar_id',
+  onDelete: 'CASCADE'
+});
+
+Month.belongsTo(Calendar, {
+  foreignKey: 'calendar_id'
+});
 
 Month.hasOne(Genre, {
   foreignKey: 'genre_id',
@@ -171,6 +181,7 @@ module.exports = {
   Forum,
   Genre,
   Mention,
+  Month,
   Movie,
   Nomination,
   Post,

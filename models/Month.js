@@ -31,11 +31,13 @@ Month.init(
     },
     movie_id: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       references: {
         model: 'movie',
         key: 'id',
       },
     },
+  },
   {
     sequelize,
     timestamps: false,

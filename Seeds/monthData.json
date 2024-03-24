@@ -1,0 +1,62 @@
+[
+    {
+      "month_name": "January",
+      "calendar_id": 1,
+      "genre_id": 1,
+    },
+    {
+      "month_name": "February",
+      "calendar_id": 2,
+      "genre_id": 2,
+    },
+    {
+      "month_name": "March",
+      "calendar_id": 3,
+      "genre_id": 3,
+    },
+    {
+      "month_name": "April",
+      "calendar_id": 4,
+      "genre_id": 4,
+    },
+    {
+      "month_name": "May",
+      "calendar_id": 5,
+      "genre_id": 5,
+    },
+    {
+      "month_name": "June",
+      "calendar_id": 6,
+      "genre_id": 6,
+    },
+    {
+      "month_name": "July",
+      "calendar_id": 7,
+      "genre_id": 7,
+    },
+    {
+      "month_name": "August",
+      "calendar_id": 8,
+      "genre_id": 8,
+    },
+    {
+      "month_name": "September",
+      "calendar_id": 9,
+      "genre_id": 9,
+    },
+    {
+      "month_name": "October",
+      "calendar_id": 10,
+      "genre_id": 10,
+    },
+    {
+      "month_name": "November",
+      "calendar_id": 11,
+      "genre_id": 11,
+    },
+    {
+      "month_name": "December",
+      "calendar_id": 12,
+      "genre_id": 12,
+    }
+]
