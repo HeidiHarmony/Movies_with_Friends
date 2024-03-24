@@ -5,7 +5,7 @@ const Comment = require("./Comment");
 const DiscussionBoard = require("./DiscussionBoard");
 const Forum = require("./Forum");
 const Genre = require("./Genre");
-const Mention = require("./Mention");
+// const Mention = require("./Mention");
 const Month = require("./Month");
 const Movie = require("./Movie");
 const Nomination = require("./Nomination");
@@ -119,19 +119,19 @@ Comment.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Mention.hasMany(User, {
+/* Mention.hasMany(User, {
   foreignKey: 'mention_id',
   onDelete: 'CASCADE'
-});
+}); */
 
-User.belongsTo(Mention, {
+/* User.belongsTo(Mention, {
   foreignKey: 'mention_id'
 });
 
 User.hasMany(Mention, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
-});
+}); */
 
 // Nomination and Voting Aspect
 
@@ -180,7 +180,7 @@ module.exports = {
   DiscussionBoard,
   Forum,
   Genre,
-  Mention,
+ // Mention,
   Month,
   Movie,
   Nomination,

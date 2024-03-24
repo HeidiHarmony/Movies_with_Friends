@@ -33,7 +33,7 @@ const Comment = require("./models/Comment");
 const DiscussionBoard = require("./models/DiscussionBoard");
 const Forum = require("./models/Forum");
 const Genre = require("./models/Genre");
-const Mention = require("./models/Mention");
+// const Mention = require("./models/Mention");
 const Month = require("./models/Month");
 const Movie = require("./models/Movie");
 const Nomination = require("./models/Nomination");
@@ -57,27 +57,31 @@ app.use(routes);
 // Connect to the database before starting the Express.js server
 sequelize.sync({ force: true }).then(() => {
 
-  User.sync().then(() => {
-    Promise.all([
-      Genre.sync(),
-      Month.sync(),
-      Movie.sync(),
-      Calendar.sync(),
-      Nomination.sync(),
-      Vote.sync(),
-      DiscussionBoard.sync(),
-      Forum.sync(),
-      Post.sync(),
-      Comment.sync(),
-      Mention.sync(),
-    ]).then(() => {
-      console.log("All models are synchronized");
-      app.listen(PORT, () => console.log('Now listening'));
+  Post.sync().then(() => {
+    User.sync().then(() => {
+      // Sync the rest of the models
+      Promise.all([
+        Calendar.sync(),
+        DiscussionBoard.sync(),
+        Forum.sync(),
+        Genre.sync(),
+       //Mention.sync(),
+        Month.sync(),
+        Movie.sync(),
+        Nomination.sync(),
+        Vote.sync(),
+        Comment.sync()
+      ]).then(() => {
+        console.log("All models are synchronized");
+        app.listen(PORT, () => console.log('Now listening on port ' + PORT));
+      }).catch(err => {
+        console.error('Unable to sync the models:', err);
+      });
     }).catch(err => {
-      console.error('Unable to sync the models:', err);
+      console.error('Unable to sync the Comment model:', err);
     });
   }).catch(err => {
-    console.error('Unable to sync the User model:', err);
-  });   
+    console.error('Unable to sync the Post model:', err);
+  });
 
 }); 
