@@ -47,7 +47,7 @@ Movie.init(
     timestamps: false,
     underscored: true,
     modelName: 'movie',
-    tableName: "movies",
+    tableName: "movie",
     freezeTableName: true,
   }
 );

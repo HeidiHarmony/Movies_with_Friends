@@ -13,7 +13,7 @@ Nomination.init(
         autoIncrement: true,
     },
     movie_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: 'movie',
@@ -21,7 +21,7 @@ Nomination.init(
         },
     },
     user_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: 'user',
@@ -29,7 +29,7 @@ Nomination.init(
         },
     },
     month_id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: 'calendar',
@@ -42,7 +42,7 @@ Nomination.init(
     timestamps: false,
     underscored: true,
     modelName: 'nomination',
-    tableName: "nominations",
+    tableName: "nomination",
     freezeTableName: true,
 }
 );

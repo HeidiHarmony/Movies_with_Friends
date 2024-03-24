@@ -11,15 +11,15 @@ DiscussionBoard.init(
       autoIncrement: true,
     },
     month_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "calendar",
+        model: "month",
         key: "id",
       },
     },
-      movie_title: {
-        type: DataTypes.STRING,
+      movie_id: {
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
           model: "movie",
@@ -32,7 +32,7 @@ DiscussionBoard.init(
     timestamps: false,
     underscored: true,
     modelName: "discussion_board",
-    tableName: "discussion_boards",
+    tableName: "discussion_board",
 
   }
 );

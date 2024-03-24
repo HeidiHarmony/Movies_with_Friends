@@ -20,10 +20,10 @@ Genre.init(
       allowNull: false,
     },
     month_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "calendar",
+        model: "month",
         key: "id",
       },
     }
@@ -33,7 +33,7 @@ Genre.init(
     timestamps: false,
     underscored: true,
     modelName: "genre",
-    tableName: "genres",
+    tableName: "genre",
     timestamps: false,
     freezeTableName: true,
     

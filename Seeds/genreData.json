@@ -2,61 +2,61 @@
 {
     "name": "Action",
     "genre_code": 28,
-    "month_name": "January"
+    "month_id": 1
 },
 {
     "name": "Documentary",
     "genre_code": 99,
-    "month_name": "February"
+    "month_id": 2
 },
  {
     "name": "Comedy",
     "genre_code": 35,
-    "month_name": "March"
+    "month_id": 3
 },
 {
     "name": "Science Fiction",
     "genre_code": 878,
-    "month_name": "April"
+    "month_id": 4
 },
 {
     "name": "Thriller",
     "genre_code": 53,
-    "month_name": "May"
+    "month_id": 5
 },
  {
     "name": "Fantasy",
     "genre_code": 14,
-    "month_name": "June"
+    "month_id": 6
 }, 
 {
     "name": "Western",
     "genre_code": 37,
-    "month_name": "July"
+    "month_id": 7
 },
 {
     "name": "Horror",
     "genre_code": 27,
-    "month_name": "August"
+    "month_id": 8
 },
  {
     "name": "Romance",
     "genre_code": 10749,
-    "month_name": "September"
+    "month_id": 9
 }, 
 {
     "name": "Mystery",
     "genre_code": 9648,
-    "month_name": "October"
+    "month_id": 10
 },
 {
     "name": "Adventure",
     "genre_code": 12,
-    "month_name": "November"
+    "month_id": 11
 },
  {
     "name": "Family",
     "genre_code": 10751,
-    "month_name": "December"
+    "month_id": 12
 }     
 ]

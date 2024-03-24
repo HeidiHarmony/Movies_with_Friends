@@ -36,7 +36,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [6],
       },
     },
     user_name: {
@@ -80,7 +80,7 @@ User.init(
     timestamps: true,
     underscored: true,
     modelName: 'user',
-    tableName: 'users',
+    tableName: 'user',
     freezeTableName: true,
   }
 ); 

@@ -1,9 +1,9 @@
-const Router = require("express").Router();
-const { where } = require("sequelize");
+const router = require("express").Router();
 const { Rating } = require("../../models");
+require("../../models/Rating");
 
 
-Router.get("/:movieId", async (req, res) => {
+router.get("/:movieId", async (req, res) => {
   try {
     const ratingData = await Rating.findAll({
       where: {
@@ -18,7 +18,7 @@ Router.get("/:movieId", async (req, res) => {
 });''
 
 // Add a user's rating
-app.post('/update-rating/:userId', async (req, res) => {
+router.post('/update-rating/:userId', async (req, res) => {
   try {
     const userId = req.params.user_id;
     const rating = await Rating.findOne({ where: { user_id: userId } });
@@ -38,4 +38,4 @@ app.post('/update-rating/:userId', async (req, res) => {
 });
 
 
-module.exports = Router;
+module.exports = router;
