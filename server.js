@@ -57,25 +57,31 @@ app.use(routes);
 // Connect to the database before starting the Express.js server
 sequelize.sync({ force: true }).then(() => {
   User.sync().then(() => {
-    Month.sync().then(() => {
-      // Sync the rest of the models
-      Promise.all([
-        DiscussionBoard.sync(),
-        Forum.sync(),
-        Post.sync(),
-        Genre.sync(),
-        //Mention.sync(),
-        Movie.sync(),
-        Nomination.sync(),
-        Vote.sync(),
-        Comment.sync(),
-        Calendar.sync()
-      ]).then(() => {
-        console.log("All models are synchronized");
-        app.listen(PORT, () => console.log('Now listening on port ' + PORT));
-      }).catch((err) => {
-        console.log("Error syncing models:", err);
+    Calendar.sync().then(() => {
+      Month.sync().then(() => {
+        Genre.sync().then(() => {
+          Movie.sync().then(() => {
+            Nomination.sync().then(() => {
+              Vote.sync().then(() => {
+                DiscussionBoard.sync().then(() => {
+                  Forum.sync().then(() => {
+                    Post.sync().then(() => {
+                      Comment.sync().then(() => {
+                        console.log("All models are synchronized");
+                        app.listen(PORT, () => console.log('Now listening on port ' + PORT));
+                      }).catch((err) => {
+                        console.log("Error syncing models:", err);
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
       });
     });
   });
 });
+
+
