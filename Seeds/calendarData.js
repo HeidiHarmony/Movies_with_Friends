@@ -1,5 +1,6 @@
 [
     {
+    "month_num": 1,
     "month_name": "January",
     "genre_id": "Action",
     "movie_id": "Die Hard",
@@ -11,6 +12,7 @@
     "date_discuss_end": 01312024
     },
     {
+    "month_num": 2,   
     "month_name": "February",
     "genre_id": "Documentary",
     "movie_id": "The Ark and the Darkness",
@@ -22,6 +24,7 @@
     "date_discuss_end": 02292024
     },
     {
+    "month_num": 3,
     "month_name": "March",
     "genre_id": "Comedy",
     "movie_id": "Kung Fu Panda 4",
@@ -33,6 +36,7 @@
     "date_discuss_end": 03312024
     },
     {
+    "month_num": 4,
     "month_name": "April",
     "genre_id": "Science Fiction",
     "movie_id": "Spider-Man: Across the Spider-Verse",
@@ -44,6 +48,7 @@
     "date_discuss_end": 04302024
     },
     {
+    "month_num": 5,
     "month_name": "May",
     "genre_id": "Thrillers",
     "movie_id": "TBD",
@@ -55,6 +60,7 @@
     "date_discuss_end": 05312024
     },
     {
+    "month_num": 6,
     "month_name": "June",
     "genre_id": "Fantasy",
     "movie_id": "TBD",
@@ -66,6 +72,7 @@
     "date_discuss_end": 06302024
     },
     {
+    "month_num": 7,
     "month_name": "July",
     "genre_id": "Western",
     "movie_id": "TBD",
@@ -77,6 +84,7 @@
     "date_discuss_end": 07312024
     },
     {
+    "month_num": 8,
     "month_name": "August",
     "genre_id": "Horror",
     "movie_id": "TBD",
@@ -88,6 +96,7 @@
     "date_discuss_end": 08312024
     },
     {
+    "month_num": 9,
     "month_name": "September",
     "genre_id": "Romance",
     "movie_id": "TBD",
@@ -99,6 +108,7 @@
     "date_discuss_end": 09302024
     },
     {
+    "month_num": 10,
     "month_name": "October",
     "genre_id": "Mystery",
     "movie_id": "TBD",
@@ -110,6 +120,7 @@
     "date_discuss_end": 10312024
     },
     {
+    "month_num": 11,
     "month_name": "November",
     "genre_id": "Adventure",
     "movie_id": "TBD",
@@ -121,6 +132,7 @@
     "date_discuss_end": 11302024
     },
     {
+    "month_num": 12,
     "month_name": "December",
     "genre_id": "Family Movies",
     "movie_id": "TBD",
