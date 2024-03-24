@@ -1,13 +1,5 @@
-
-
-
-
-module.exports = Nomination;
-
-/* const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-const User = require("./User"); // Import the User model
-const Movie = require("./Movie"); // Import the Movie model
 
 class Nomination extends Model {
   }
@@ -20,32 +12,40 @@ Nomination.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    movieId: {
-        type: DataTypes.INTEGER,
+    movie_title: {
+        type: DataTypes.STRING,
         allowNull: false,
         references: {
             model: 'Movie',
             key: 'id',
         },
     },
-    userId: {
-        type: DataTypes.INTEGER,
+    user_name: {
+        type: DataTypes.STRING,
         allowNull: false,
         references: {
             model: 'user',
             key: 'id',
         },
     },
-    month: {
+    month_name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: 'calendar',
+            key: 'id',
+        },
     },
-}, {
-    sequelize, 
-    tableName: 'nomination',
-    timestamps: true,
+}, 
+{
+    sequelize,
+    timestamps: false,
     underscored: true,
-
+    modelName: 'nomination',
+    tableName: "nominations",
+    freezeTableName: true,
 }
-); */
+);
+
+module.exports = Nomination;
 
