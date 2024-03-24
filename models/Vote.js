@@ -1,50 +1,44 @@
-
-
-
-module.exports = Vote;
-
-/* const { DataTypes, Model } = require('sequelize');
+const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class UserMovieVote extends Model {
-    // checkPassword(loginPw) {
-    //   return bcrypt.compareSync(loginPw, this.password);
-    // }
-
+class Vote extends Model {
 }
 
 UserMovieVote.init(
-
 {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    movieId: {
+    movie_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         reference: {
-            model: 'Movie',
+            model: 'movie',
             key: 'id',
         },
     },
-    userId: {
+    user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         reference: {
-            model: 'users',
+            model: 'user',
             key: 'id',
         },
     },
-    vote: {
+    num_votes: {
         type: DataTypes.INTEGER,
         allowNull: true,
     }
 }, {
     sequelize,
-    tableName: 'user_movie_votes',
     timestamps: false,
     underscored: true,
-}); */
+    modelName: 'vote',
+    tableName: 'votes',
+    freezeTableName: true
+});
 
+module.exports = Vote;
+   

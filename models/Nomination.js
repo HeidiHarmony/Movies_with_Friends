@@ -12,15 +12,15 @@ Nomination.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    movie_title: {
+    movie_id: {
         type: DataTypes.STRING,
         allowNull: false,
         references: {
-            model: 'Movie',
+            model: 'movie',
             key: 'id',
         },
     },
-    user_name: {
+    user_id: {
         type: DataTypes.STRING,
         allowNull: false,
         references: {
@@ -28,7 +28,7 @@ Nomination.init(
             key: 'id',
         },
     },
-    month_name: {
+    month_id: {
         type: DataTypes.STRING,
         allowNull: false,
         references: {
