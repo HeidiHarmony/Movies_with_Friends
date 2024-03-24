@@ -1,5 +1,4 @@
-[  
-
+[
 {
     "name": "Action",
     "genre_code": 28,
@@ -59,6 +58,5 @@
     "name": "Family",
     "genre_code": 10751,
     "month_name": "December"
-},     
-
+}     
 ]

@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+class Month extends Model {}
 
-class Movie extends Model {}
-
-Movie.init(
+Month.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,22 +11,16 @@ Movie.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    month_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    overview: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    link: {
-      type: DataTypes.STRING,
-      allowNull: true, 
-    },
-    // Comment out if not used
-    poster_url: {
-      type: DataTypes.STRING,
-      allowNull: true,
+    calendar_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'calendar',
+          key: 'id',
+        }
     },
     genre_id: {
       type: DataTypes.INTEGER,
@@ -36,20 +29,20 @@ Movie.init(
         key: 'id',
       },
     },
-    is_winner: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: false,
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'movie',
+        key: 'id',
+      },
     },
-  },
   {
     sequelize,
     timestamps: false,
-    underscored: true,
-    modelName: 'movie',
-    tableName: "movies",
     freezeTableName: true,
+    underscored: true,
+    modelName: 'month',
   }
 );
 
-module.exports = Movie;
+module.exports = Month;

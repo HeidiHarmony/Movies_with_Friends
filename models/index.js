@@ -1,43 +1,180 @@
+// Purpose: This file exports all models to be used in the application.
 
-
-
-
-
-
-/* const User = require("./User");
-const Genres = require("./genres");
+const Calendar = require("./Calendar");
+const Comment = require("./Comment");
+const DiscussionBoard = require("./DiscussionBoard");
+const Forum = require("./Forum");
+const Genre = require("./Genre");
+const Mention = require("./Mention");
 const Movie = require("./Movie");
-const Nomination = require("./Nomination"); // Renamed from 'movieNominate' for clarity
-const Rating = require("./rating"); // Assuming you have a Rating model defined
-const UserMovieVote = require("./Vote"); // Assuming you have a UserMovieVote model defined
-const Discussion = require("./Discussion");
-// hello
-// Define associations
-User.hasMany(Rating, { foreignKey: "userId", onDelete: "CASCADE" });
-User.hasMany(Nomination, { foreignKey: "userId", onDelete: "CASCADE" });
-User.belongsToMany(Discussion, { through: 'UserDiscussion' });
-Discussion.belongsToMany(User, { through: 'UserDiscussion' });
-User.hasMany(UserMovieVote, {
-  foreignKey: "userId",
-  onDelete: "CASCADE",
+const Nomination = require("./Nomination");
+const Post = require("./Post");
+const Rating = require("./rating");
+const User = require("./User");
+const Vote = require("./Vote"); 
+
+// Associations
+
+// Calendar Aspect
+
+Month.hasOne(Genre, {
+  foreignKey: 'genre_id',
+  onDelete: 'CASCADE'
 });
-Movie.hasMany(Nomination, { foreignKey: "movieId", onDelete: "CASCADE" });
-Movie.hasMany(Rating, { foreignKey: "movieId", onDelete: "CASCADE" });
-Movie.hasMany(UserMovieVote, { foreignKey: "movieId", onDelete: "CASCADE" });
-Genres.belongsTo(Movie, { foreignKey: "movieId", onDelete: "CASCADE" });
-Nomination.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE"});
-Nomination.belongsTo(Movie, { foreignKey: "movieId", onDelete: "CASCADE" });
-Rating.belongsTo(User, { foreignKey: "userId" });
-Rating.belongsTo(Movie, { foreignKey: "movieId" });
-UserMovieVote.belongsTo(User, { foreignKey: "userId" });
-UserMovieVote.belongsTo(Movie, { foreignKey: "movieId" });
+
+Genre.belongsTo(Month, {
+  foreignKey: 'genre_id'
+});
+
+Month.hasOne(Movie, {
+  foreignKey: 'movie_id',
+  onDelete: 'CASCADE'
+});
+
+Movie.belongsTo(Month, {
+  foreignKey: 'movie_id'
+});
+
+Month.hasOne(DiscussionBoard, {
+  foreignKey: 'discussion_id',
+  onDelete: 'CASCADE'
+});
+
+DiscussionBoard.belongsTo(Month, {
+  foreignKey: 'discussion_id'
+});
+
+// Discussion and Rating Aspect
+
+User.hasMany(Rating, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Rating.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Movie.hasMany(Rating, {
+  foreignKey: 'movie_id',
+  onDelete: 'CASCADE'
+});
+
+Rating.belongsTo(Movie, {
+  foreignKey: 'movie_id'
+});
+
+DiscussionBoard.hasMany(Forum, {
+  foreignKey: 'discussion_id',
+  onDelete: 'CASCADE'
+});
+
+Forum.belongsTo(DiscussionBoard, {
+  foreignKey: 'discussion_id'
+});
+
+Forum.hasMany(Post, {
+  foreignKey: 'forum_id',
+  onDelete: 'CASCADE'
+});
+
+Post.belongsTo(Forum, {
+  foreignKey: 'forum_id'
+});
+
+Post.hasMany(Comment, {
+  foreignKey: 'post_id',
+  onDelete: 'CASCADE'
+});
+
+Comment.belongsTo(Post, {
+  foreignKey: 'post_id'
+});
+
+Post.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+User.hasMany(Post, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Comment.belongsTo(User, { 
+  foreignKey: 'user_id'
+});
+
+Mention.hasMany(User, {
+  foreignKey: 'mention_id',
+  onDelete: 'CASCADE'
+});
+
+User.belongsTo(Mention, {
+  foreignKey: 'mention_id'
+});
+
+User.hasMany(Mention, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+// Nomination and Voting Aspect
+
+User.hasMany(Nomination, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Nomination.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Movie.hasMany(Nomination, {
+  foreignKey: 'movie_id',
+  onDelete: 'CASCADE'
+});
+
+Nomination.belongsTo(Movie, {
+  foreignKey: 'movie_id'
+});
+
+User.hasMany(Vote, {  
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Vote.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Nomination.hasMany(Vote, {
+  foreignKey: 'nomination_id',
+  onDelete: 'CASCADE'
+});
+
+Vote.belongsTo(Nomination, {
+  foreignKey: 'nomination_id'
+});
+
+
 // Export models
+
 module.exports = {
-  User,
-  Genres,
+  Calendar,
+  Comment,
+  DiscussionBoard,
+  Forum,
+  Genre,
+  Mention,
   Movie,
   Nomination,
+  Post,
   Rating,
-  UserMovieVote,
-  Discussion,
-}; */
+  User,
+  Vote,
+};

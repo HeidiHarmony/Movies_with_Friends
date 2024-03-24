@@ -18,6 +18,14 @@ Mention.init(
             key: "id",
         },
     },
+    mentioning_user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: "user",
+            key: "id",
+        },
+    },
     mentioned_user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
