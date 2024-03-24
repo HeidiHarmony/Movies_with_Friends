@@ -2,9 +2,9 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const { Op } = require("sequelize"); // Import Op from sequelize
 
-// Create a new user. They will be automatically logged in.
+// Create a new user. They will be automatically logged in and redirected to the welcome page
 
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create({
       first_name: req.body.first_name,
@@ -22,7 +22,20 @@ router.post('/', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.status(200).json(userData);
+const userDisplayData = [
+  {
+    first_name: userData.first_name,
+    last_name: userData.last_name,
+    email: userData.email,
+    user_name: userData.user_name,
+    state: userData.state,
+    favorite_genres: userData.favorite_genres,
+    favorite_movies: userData.favorite_movies,
+    about_me: userData.about_me,
+    user_avatar: userData.user_avatar
+  }
+]
+res.render('welcome', {layout: 'main', userDisplayData }); // Render 'welcome' view
     });
   } catch (err) {
     console.error(err);
@@ -32,7 +45,7 @@ router.post('/', async (req, res) => {
 
 // Log in the user with the email and password
 
-router.post('/login', async (req, res) => {
+router.post('/signin', async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -59,7 +72,21 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.json({ user: userData, message: 'You are now logged in!' });
+      const userDisplayData = [
+        {
+          first_name: userData.first_name,
+          last_name: userData.last_name,
+          email: userData.email,
+          user_name: userData.user_name,
+          state: userData.state,
+          favorite_genres: userData.favorite_genres,
+          favorite_movies: userData.favorite_movies,
+          about_me: userData.about_me,
+          user_avatar: userData.user_avatar
+        }
+      ]
+
+      res.render('welcome', {layout: 'main', userDisplayData }); // Render 'welcome' view
     });
 
   } catch (err) {
@@ -81,7 +108,7 @@ router.post('/logout', (req, res) => {
 });
 
 // Display user's info
-
+/* 
 router.get('/me', async (req, res) => {
   try {
     if (!req.session.logged_in) {
@@ -142,4 +169,4 @@ router.get('/my-votes', async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router; */

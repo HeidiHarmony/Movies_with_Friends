@@ -10,19 +10,31 @@ friendsLink.addEventListener('click', function() {
 
 // Landing page Sign In
 
-const showSignInForm = document.getElementById("landing-showlogin");
+// button to toggle the sign in form visibility
+const landingShowLogin = document.getElementById("landing-showlogin");
+// container holding the form which begins hidden
 const signInMember = document.getElementById("signin-member");
 
-showSignInForm.addEventListener("click", function () {
-  console.log("clicked show signin form button");
+landingShowLogin.addEventListener("click", function () {
 signInMember.classList.toggle("visible-form");
-  console.log("signin form is now visible");
+  console.log("clicked show signin form button");
+});
+
+// Sign in and go to welcome
+
+// button to submit the sign in form
+const landingSignIn = document.getElementById("landing-signin");
+
+landingSignIn.addEventListener("click", function () {
+window.location.href = "/welcome";
+  console.log("clicked sign in button");
 });
 
 // Landing page Sign Up
 
 const showSignUpForm = document.getElementById("landing-showsignup");
 const signUpNewUser = document.getElementById("signup-newuser");
+const submitSignUp = document.getElementById("signup-submit");
 
 
 showSignUpForm.addEventListener("click", function () {
