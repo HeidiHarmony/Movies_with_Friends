@@ -45,6 +45,6 @@ Post.init(
     timestamps: true,
     underscored: true,
     modelName: "post",
-    tableName: "post",
+    tableName: "posts",
 }
 );

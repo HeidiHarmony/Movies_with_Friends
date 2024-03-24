@@ -31,8 +31,8 @@ DiscussionBoard.init(
     sequelize,
     timestamps: false,
     underscored: true,
-    modelName: "DiscussionBoard",
-    tableName: "discussion_board",
+    modelName: "discussion_board",
+    tableName: "discussion_boards",
 
   }
 );

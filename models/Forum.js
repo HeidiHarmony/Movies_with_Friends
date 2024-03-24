@@ -28,7 +28,7 @@ Forum.init(
     timestamps: false,
     underscored: true,
     modelName: "forum",
-    tableName: "forum",
+    tableName: "forums",
 }
 );
 
