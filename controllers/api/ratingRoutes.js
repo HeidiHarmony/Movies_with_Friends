@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const { Rating } = require("../../models");
+require("../../models");
 require("../../models/Rating");
 
 
-router.get("/:movieId", async (req, res) => {
+/* router.get("/:movieId", async (req, res) => {
   try {
     const ratingData = await Rating.findAll({
       where: {
@@ -35,7 +35,7 @@ router.post('/update-rating/:userId', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'An error occurred while updating the rating' });
   }
-});
+}); */
 
 
 module.exports = router;
