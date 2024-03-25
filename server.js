@@ -33,7 +33,6 @@ const Comment = require("./models/Comment");
 const DiscussionBoard = require("./models/DiscussionBoard");
 const Forum = require("./models/Forum");
 const Genre = require("./models/Genre");
-// const Mention = require("./models/Mention");
 const Month = require("./models/Month");
 const Movie = require("./models/Movie");
 const Nomination = require("./models/Nomination");
@@ -44,18 +43,23 @@ const { Rating } = require('./models');
 
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(withAuth);
+// Set default layout to 'main' for all views except the landing page
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+// Render landing.handlebars with a different layout
+app.get('/', (req, res) => {
+  res.render('landing', { layout: 'landing-layout' });
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-// Connect to the database before starting the Express.js server
+// Sync Sequelize models and start server
 sequelize.sync({ force: true }).then(() => {
   User.sync().then(() => {
     Calendar.sync().then(() => {
@@ -71,8 +75,8 @@ sequelize.sync({ force: true }).then(() => {
                         Comment.sync().then(() => {
                           console.log("All models are synchronized");
                           app.listen(PORT, () => console.log('Now listening on port ' + PORT));
-                      }).catch((err) => {
-                        console.log("Error syncing models:", err);
+                        }).catch((err) => {
+                          console.log("Error syncing models:", err);
                         });
                       });
                     });
@@ -86,5 +90,3 @@ sequelize.sync({ force: true }).then(() => {
     });
   });
 });
-
-

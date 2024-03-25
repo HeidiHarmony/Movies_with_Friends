@@ -15,10 +15,10 @@ signInMember.classList.toggle("visible-form");
 // button to submit the sign in form
 const landingSignIn = document.getElementById("landing-signin");
 
-landingSignIn.addEventListener("click", function () {
-window.location.href = "/welcome";
+landingSignIn.onclick = function () {
+  window.location.href = "/signin";
   console.log("clicked sign in button");
-});
+};
 
 // Landing page Sign Up
 

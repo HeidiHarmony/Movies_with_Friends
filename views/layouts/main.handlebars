@@ -7,18 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Movies with Friends</title>
     <link rel="stylesheet" href="https://use.typekit.net/paw5dsc.css" />
-    <link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css" />
-    <!-- <link rel="stylesheet" href="/css/jass.css"> -->
+    <!--<link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css" />-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"/>
     <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   </head>
  
 <body class="has-background-dark">
+      {{> user-header-p }}
+
       <main>
-       <!-- Render the sub layout -->
+       <!-- Render the called view -->
        {{{ body }}} 
       </main>
 

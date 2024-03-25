@@ -1,11 +1,18 @@
 const router = require('express').Router();
-const { User } = require('../../models');
-const { Op } = require("sequelize"); // Import Op from sequelize
+const { User, Movie } = require('../../models');
 
-// Create a new user. They will be automatically logged in and redirected to the welcome page
+// Define movieData as a constant and initialize it with a Promise to fetch all movies
+const movieData = Movie.findAll()
+  .then(movies => movies)
+  .catch(err => {
+    console.error('Error fetching movies:', err);
+    return []; // Return an empty array in case of an error
+  });
 
+// ROUTE: Create a new user. They will be automatically logged in and redirected to the welcome page
 router.post('/signup', async (req, res) => {
   try {
+    // Create a new user
     const userData = await User.create({
       first_name: req.body.first_name,
       last_name: req.body.last_name,
@@ -18,24 +25,27 @@ router.post('/signup', async (req, res) => {
       about_me: req.body.about_me,
       user_avatar: req.body.user_avatar,
     });
+
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-const userDisplayData = [
-  {
-    first_name: userData.first_name,
-    last_name: userData.last_name,
-    email: userData.email,
-    user_name: userData.user_name,
-    state: userData.state,
-    favorite_genres: userData.favorite_genres,
-    favorite_movies: userData.favorite_movies,
-    about_me: userData.about_me,
-    user_avatar: userData.user_avatar
-  }
-]
-res.render('welcome', {layout: 'main', userDisplayData }); // Render 'welcome' view
+      const userDisplayData = [
+        {
+          first_name: userData.first_name,
+          last_name: userData.last_name,
+          email: userData.email,
+          user_name: userData.user_name,
+          state: userData.state,
+          favorite_genres: userData.favorite_genres,
+          favorite_movies: userData.favorite_movies,
+          about_me: userData.about_me,
+          user_avatar: userData.user_avatar
+        }
+      ];
+
+      // Render 'welcome' view with userDisplayData and movieData
+      res.redirect('/welcome');
     });
   } catch (err) {
     console.error(err);
@@ -43,7 +53,7 @@ res.render('welcome', {layout: 'main', userDisplayData }); // Render 'welcome' v
   }
 });
 
-// Log in the user with the email and password
+// ROUTE: Sign in the user with the email and password
 
 router.post('/signin', async (req, res) => {
   try {
@@ -86,13 +96,13 @@ router.post('/signin', async (req, res) => {
         }
       ]
 
-      res.render('welcome', {layout: 'main', userDisplayData }); // Render 'welcome' view
+      res.redirect('/welcome');
     });
 
   } catch (err) {
     res.status(400).json(err);
   }
-});
+}); 
 
 
 // Log out the user
@@ -105,7 +115,7 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
-});
+}); 
 
 // Display user's info
 /* 

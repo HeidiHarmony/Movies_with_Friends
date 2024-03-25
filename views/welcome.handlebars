@@ -1,60 +1,53 @@
- <!--WELCOME PAGE BEGINS-->
-  <div id="header-holder" class="has-background-black">
-  <!-- Render the welcome.handlebars -->
-       {{> user-header-p }}
-  </div>
-    
- <!--Group Activity-->
-       <section class="section">
-        <div class="container has-text-centered">
-            <div class="is-centered is-vcentered">
-              <h1 class="is-size-1 mb-5"><span class="current-month-display"></span> is <span class="chennai genre-display"></span> month!</h1>
-                <div class="columns has-background-black p-3">
-                  <div class="phase-info column is-two-thirds">
-                   
-                    <p class="is-size-3 mb-5">Right now we are <span id="phase-display"></span></p>
+<section class="section">
+    <div class="container has-text-centered">
+        <div class="is-centered is-vcentered">
+          <h1 class="is-size-1 mb-5"><span class="current-month-display"></span> is <span class="chennai genre-display"></span> month!</h1>
+            <div class="columns has-background-black p-3">
+              <div class="phase-info column is-two-thirds">
                 
-                    
-                    <div id="welcome-buttons" class="has-text-weight-bold buttons is-centered">
-                       <!--Button to view calendar-->
-                      <a id="show-calendar" class="button is-info is-outlined js-modal-trigger" data-target="calendarModal">View Calendar</a>
-                    <!--*** ROUTE*** Button to take an action in the current phase of activity: nominating, voting, or discussion-->
-                      <a id="action-button" class="button is-warning"><span id="action-text"></span></a>
-                    </div>
-                    <!--end buttons div-->
-
-
-                   <div class="is-size-4 mt-5 mb-5">
-                      <p>The winning movie for this month is <span id="winning-movie-display"></span></p>
-                    </div>
-                    <div id="poster-display">
-                      <!--source needs to be updated programmatically-->
-                        <img id="winning-movie-poster" src="/images/temp-poster-kfp.jpg" alt="winning movie poster" class="poster">
-                    </div>
+                <p class="is-size-3 mb-5">Right now we are <span id="phase-display"></span></p>
+            
+                
+                <div id="welcome-buttons" class="has-text-weight-bold buttons is-centered">
+                    <!--Button to view calendar-->
+                  <a id="show-calendar" class="button is-info is-outlined js-modal-trigger" data-target="calendarModal">View Calendar</a>
+                <!--*** ROUTE*** Button to take an action in the current phase of activity: nominating, voting, or discussion-->
+                  <a id="action-button" class="button is-warning"><span id="action-text"></span></a>
                 </div>
+                <!--end buttons div-->
 
-                <!--Links to view the closed forums-->
-                <div id="closed-forums" class="column is-one-third is-fullheight">
-                  <div class="p-3 has-background-grey mt-6">
-                    <p class="has-text-black is-size-4">Check out the forums from past months <br /><span class="is-size-5">(closed for discussion)</span></p>
-                    <div class="is-size-5 has-text-light">
-                      <!--Should be {{month}}: {{title}}-->
-                      <p class="mb-3"><a href="">January: <br /><strong>Die Hard</strong></a></p>
-                      <hr />
-                      <p><a href="">February: <br /><strong>The Ark and the Darkness</strong></a></p>
-                   </div>
-                  </div>
+
+                <div class="is-size-4 mt-5 mb-5">
+                  <p>The winning movie for this month is <span id="winning-movie-display"></span></p>
+                </div>
+                <div id="poster-display">
+                  <!--source needs to be updated programmatically-->
+                    <img id="winning-movie-poster" src="/images/temp-poster-kfp.jpg" alt="winning movie poster" class="poster">
+                </div>
+            </div>
+
+            <!--Links to view the closed forums-->
+            <div id="closed-forums" class="column is-one-third is-fullheight">
+              <div class="p-3 has-background-grey mt-6">
+                <p class="has-text-black is-size-4">Check out the forums from past months <br /><span class="is-size-5">(closed for discussion)</span></p>
+                <div class="is-size-5 has-text-light">
+                  <!--Should be {{month}}: {{title}}-->
+                  <p class="mb-3"><a href="">January: <br /><strong>Die Hard</strong></a></p>
+                  <hr />
+                  <p><a href="">February: <br /><strong>The Ark and the Darkness</strong></a></p>
                 </div>
               </div>
             </div>
-        </div>
-        <!--Modal to hold the Calendar partial****************************-->
-        <div id="calendarModal" class="modal">
-          <div class="modal-background"></div>
-          <div class="modal-content">
-            {{> calendar-p}}
           </div>
-          <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <!--end group-calendar.handlebars ************************* -->
-    </section>
+    </div>
+    <!--Modal to hold the Calendar partial****************************-->
+    <div id="calendarModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        {{> calendar-p}}
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!--end group-calendar.handlebars ************************* -->
+</section>
