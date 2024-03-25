@@ -3,7 +3,7 @@ const currentDate = new Date(); // Use the current date
 window.addEventListener("DOMContentLoaded", function() {
     // Your code here will run when the entire page, including the Handlebars template, is fully loaded
     let phaseName = getCurrentPhase();
-    let phaseDisplay = document.getElementById('phase-display');
+    let phaseDisplay = document.getElementById("phase-display");
     phaseDisplay.innerHTML = phaseName;
     console.log(phaseName);
 

@@ -5,17 +5,14 @@ const withAuth = require("../utilities/auth");
 
 
 // route for the landing page
-router.get('/layouts', (req, res) => {
+router.get('/', async (req, res) => {
   res.render('landing', { layout: 'landing' }); // Specify the 'landing' layout for this view
 });
+
+
 router.get("/welcome", async (req, res) => {
   try {
-    const movieData = await Movie.findAll({});
-    const movies = movieData.map((movie) => movie.get({ plain: true }));
-    res.render("welcome", {
-      movies,
-      logged_in: req.session.logged_in,
-    });
+    res.render("welcome", { layout: "main" });
   } catch (err) {
     res.status(500).json(err);
   }

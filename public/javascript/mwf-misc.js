@@ -1,13 +1,3 @@
-// Navigation links
-
-/* const friendsLink = document.getElementById('nav-friends');
-
-friendsLink.addEventListener('click', function() {
-  // Redirect to the desired view
-  window.location.href = 'friends'; // Change 'view.html' to the URL of your desired view/page
-}
-); */
-
 // Landing page Sign In
 
 // button to toggle the sign in form visibility
@@ -34,7 +24,7 @@ window.location.href = "/welcome";
 
 const showSignUpForm = document.getElementById("landing-showsignup");
 const signUpNewUser = document.getElementById("signup-newuser");
-const submitSignUp = document.getElementById("signup-submit");
+const submitSignUp = document.getElementById("submit-signup");
 
 
 showSignUpForm.addEventListener("click", function () {

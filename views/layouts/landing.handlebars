@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Movies with Friends</title>
     <link rel="stylesheet" href="https://use.typekit.net/paw5dsc.css" />
-    <link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css" />
-    <!-- <link rel="stylesheet" href="/css/jass.css"> -->
+    <!--<link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css" />-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"/>
     <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   </head>
  
-<body class="has-background-dark">
-    
-<section>
-  <!--navigation for landing page only-->
-      <nav class="navbar main-menu">
+<body>
+    <!--Hero begins-->
+     <section class="hero is-black is-fullheight">
+
+       <!-- Hero head: will stick at the top -->
+      <div class="hero-head"> 
+        <!--navigation for landing page only-->
+       <nav class="navbar is-fullwidth main-menu">
         <div class="container">
           <div class="navbar-brand">
             <!--connect to home-->
@@ -31,35 +31,97 @@
               <span></span>
               <span></span>
             </span>
-          </div>
-          <div id="navbarMenuMain" class="navbar-menu has-text-light">
-            <div class="navbar-end">
-              <!--***ROUTE*** render the about page-->
-              <a class="navbar-item">
+          </div><!--end of navbar-brand-->
+
+          <div id="navbarMenuLanding" class="navbar-menu has-text-light">
+            
+            <div class="navbar-start">
+              <a id="about-link" class="navbar-item">
                 About Movies with Friends
               </a>
-              <!--***ROUTE*** render the contact page-->
-              <a class="navbar-item">
+            </div>
+            
+            <div class="navbar-end">
+              <a id="contact-link" class="navbar-item">
                 Contact Us
               </a>
            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  
-    <main id="main-body">
-       <!-- Render the sub layout -->
-       {{{ body }}} 
-      </main>
 
-     {{> footer }}
+          </div><!--end of navbarMenuLanding-->
+        </nav><!--end of navbar-->
+      </div> <!--end of hero-head-->
+   
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body theater">
+      <div class="container has-text-centered pt-2 px-6">
+        <section class="top-start">
+            <h1 class="has-text-light has-shadow is-size-3-mobile is-size-2-tablet is-size-2-desktop">You might want to join <span class="chennai">Movies with Friends</span> if...</h1>
+        </section>
+        <section>
+         <p class="has-text-warning is-size-5"><span><i class="fa-solid fa-people-line is-size-3 mt-2 mr-3"></i></span>You love to watch movies AND discuss them with other people.</p>
+        </section>
+        <section>
+            <p class="has-text-info is-size-5"><span><i class="fa-solid fa-pen-to-square is-size-3 mt-2 mr-3"></i></span>You like to read and write reviews on major movie websites.</p> 
+        </section>
+        <section>
+            <p class="has-text-success is-size-5"><span><i class="fa-solid fa-share-nodes is-size-3 mt-2 mr-3"></i></span>You post about movies on other social media platforms, <br />but not everyone shares your passion for analysis or has watched the same films.</p>
+        </section>
+          <!--Call to action-->
+        <div class="container has-text-centered mx-auto">
+          <p class="is-size-5 has-text-light">Sign up for <span class="chennai">Movies with Friends</span> today and join the conversation!</p>
+      </div>
+    </div>
+ <!--sign up box, invisible until the sign up button is clicked-->
+      <div id="holds-the-signup" class="hidden-form container">
+        {{> signup-p}}
+     </div>
+   <!--sign in box, invisible until the sign in button is clicked-->
+ <container id="signin-member" class="hidden-form">
+          <!--sign in form -->
+          <div class="box mx-auto level">
+            <form id="signin-form">
+
+              <div class="level-left">
+
+                <div class="field level-item">
+                <label class="label has-text-grey-light is-size-6">Email:&nbsp;&nbsp;</label>
+                <div class="control">
+                  <input id="email-login" class="input" type="email" placeholder="e.g. luke@starwars.com">
+                </div>
+              </div>
+
+              <div class="field level-item">
+                <label class="label has-text-grey-light is-size-6">Password:&nbsp;&nbsp;</label>
+                <div class="control">
+                  <input id="password-login" class="input" type="password" placeholder="********">
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="level-right">
+              <!--sign in the user here-->
+              <button id="landing-signin" class="button is-danger level-item pl-2">Sign in</button>
+            </div>
+        </form>
+      </div>
+    </container> <!--end of sign in box--> 
+<!--Buttons to show the sign in form or open the sign up modal-->
+       <div id ="entry-buttons" class="container mx-auto">
+            <a id="landing-showsignup" class="button m-2 hero-button is-danger">Sign Up</a>
+            <a id ="landing-showlogin" class="button m-2 hero-button is-danger is-outlined">Member Sign In</a>
+        </div>              
+</div><!--end of hero-body-->
+     
+ <!--Hero footer: will stick at the bottom-->
+    <div class="hero-foot">
+     {{> footer-p }}
+    </div>  <!--end of hero-->
   
   <script src="/javascript/mwf-misc.js"></script>
   <script src="/javascript/phase.js"></script>
   <script src="https://kit.fontawesome.com/76aa510a07.js" crossorigin="anonymous"></script>
-</body>
 
-</html>
+</body>
 
 </html>
