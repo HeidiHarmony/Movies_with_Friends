@@ -1,19 +1,12 @@
-const router = require('express').Router();
-const { User, Movie } = require('../../models');
+const router = require("express").Router();
+const User = require('../models');
 
-// Define movieData as a constant and initialize it with a Promise to fetch all movies
-const movieData = Movie.findAll()
-  .then(movies => movies)
-  .catch(err => {
-    console.error('Error fetching movies:', err);
-    return []; // Return an empty array in case of an error
-  });
 
 // ROUTE: Create a new user. They will be automatically logged in and redirected to the welcome page
 router.post('/signup', async (req, res) => {
   try {
     // Create a new user
-    const userData = await User.create({
+    await User.create({
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       email: req.body.email,
@@ -26,83 +19,73 @@ router.post('/signup', async (req, res) => {
       user_avatar: req.body.user_avatar,
     });
 
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+    console.log('User created successfully');
 
-      const userDisplayData = [
-        {
-          first_name: userData.first_name,
-          last_name: userData.last_name,
-          email: userData.email,
-          user_name: userData.user_name,
-          state: userData.state,
-          favorite_genres: userData.favorite_genres,
-          favorite_movies: userData.favorite_movies,
-          about_me: userData.about_me,
-          user_avatar: userData.user_avatar
-        }
-      ];
+    req.session.user_id = User.id;
+    req.session.logged_in = true;
 
-      // Render 'welcome' view with userDisplayData and movieData
-      res.redirect('/welcome');
-    });
+    const userDisplayData = {
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      user_name: req.body.user_name,
+      state: req.body.state,
+      favorite_genres: req.body.favorite_genres,
+      favorite_movies: req.body.favorite_movies,
+      about_me: req.body.about_me,
+      user_avatar: req.body.user_avatar
+    };
+
+    // Store user display data in session for later use
+    req.session.userDisplayData = userDisplayData;
+    console.log('User display data stored in session');
+
+
+    // Redirect user to the welcome page
+    res.redirect('/welcome');
+    console.log('User redirected to welcome page');
   } catch (err) {
     console.error(err);
     res.status(400).json(err);
   }
 });
 
-// ROUTE: Sign in the user with the email and password
 
+// ROUTE: Sign in the user with the email and password
 router.post('/signin', async (req, res) => {
   try {
     const { email, password } = req.body;
-
     if (!email || !password) {
       res.status(400).json({ message: 'Please provide both email and password.' });
       return;
     }
 
     const userData = await User.findOne({ where: { email } });
-
     if (!userData) {
       res.status(400).json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
     const validPassword = await userData.checkPassword(password);
-
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
+    // Store user ID in session for later use
+    req.session.user_id = userData.id;
+    req.session.logged_in = true;
+    console.log(req.session.user_id);
+    console.log(req.session.logged_in);
 
-      const userDisplayData = [
-        {
-          first_name: userData.first_name,
-          last_name: userData.last_name,
-          email: userData.email,
-          user_name: userData.user_name,
-          state: userData.state,
-          favorite_genres: userData.favorite_genres,
-          favorite_movies: userData.favorite_movies,
-          about_me: userData.about_me,
-          user_avatar: userData.user_avatar
-        }
-      ]
-
-      res.redirect('/welcome');
-    });
-
+    // Redirect user to the welcome page
+    res.redirect('/welcome');
   } catch (err) {
     res.status(400).json(err);
   }
-}); 
+});
+
+
 
 
 // Log out the user
@@ -110,12 +93,15 @@ router.post('/signin', async (req, res) => {
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.status(204).end();
+      // Redirect the user to the login page after logging out
+      res.redirect('/');
     });
   } else {
+    // If the user is not logged in, respond with a 404 status
     res.status(404).end();
   }
-}); 
+});
+
 
 // Display user's info
 /* 

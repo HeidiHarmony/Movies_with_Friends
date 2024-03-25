@@ -1,37 +1,74 @@
 const router = require("express").Router();
-const { Movie, User } = require("../models");
-const withAuth = require("../utilities/auth");
-
+const { User, Movie } = require('../models');
+// const withAuth = require("../utilities/auth");
 
 
 // route for the landing page
 router.get('/', async (req, res) => {
-  res.render('landing', { layout: 'landing' }); // Specify the 'landing' layout for this view
+  res.render('landing', { layout: 'landing-layout' }); // Specify the 'landing' layout and landing view 
 });
 
 
+// route for the welcome page for signed-in users
 router.get("/welcome", async (req, res) => {
   try {
-    res.render("welcome", { layout: "main" });
+    // Retrieve the user data based on the user_id stored in the session
+    const userData = await User.findByPk(req.session.user_id);
+
+    // Retrieve all movie data
+    const movieData = await Movie.findAll();
+
+    // Render the welcome page and pass the user and movie data to it
+    res.render("welcome", { layout: "main", userData, movieData });
+  } catch (err) {
+    // Handle errors if any occur during the process
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
+
+// route for the user's profile page
+router.get("/profile", async (req, res) => {
+  try {
+    await User.findbyPk(req.session.user_id, {});
+    res.render("profile", { layout: "main" });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+// route to list all registered users
+router.get("/friends", async (req, res) => {
+  try {
+    await User.findAll({});
+    res.render("friends", { layout: "main" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// route to render the about view
 router.get("/about", async (req, res) => {
   try {
-    const movieData = await Movie.findAll({});
-
-    const movies = movieData.map((movie) => movie.get({ plain: true }));
-
-    res.render("about", {
-      movies,
-      logged_in: req.session.logged_in,
-    });
+    res.render("about", { layout: "main" });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// route to render the contact view
+router.get("/contact", async (req, res) => {
+  try {
+    res.render("contact", { layout: "main" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
+
+
 
 
 router.get("/discussion", async (req, res) => {

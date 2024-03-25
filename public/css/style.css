@@ -39,6 +39,7 @@
     --white: #fff;
     --black: #0a0a0a;
     --light-gray: #f5f5f5;
+    --med-gray: #696969;
     --dark-gray: #363636;
   }
 body p {
@@ -63,7 +64,7 @@ body p {
 }
 
 
- .main-menu {
+ .main-header {
     background: linear-gradient(to right, #FFF, #CCC, #222, #000);
 }
 
@@ -262,6 +263,10 @@ span.chennai {
     white-space: nowrap;
 }
 
+#ticket-icon {
+  transform: rotate(-45deg);
+}
+
 main h1, h2, h3, h4, h5, h6 {
     line-height: 125%;
 }   
@@ -300,12 +305,13 @@ main h1, h2, h3, h4, h5, h6 {
 /*Navigation styles*/
 
 .navbar-item {
-    color: var(--light-gray);
+    color: var(--med-gray);
     font-family: "chennai", sans-serif;
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 100%;
+    font-size: 90%;
+    letter-spacing: 1px;
 }
 
 .navbar-item img {
@@ -323,12 +329,6 @@ main h1, h2, h3, h4, h5, h6 {
     vertical-align: bottom;
 }
 
-
- 
-
- .navbar-item, .navbar-link {
-    color:whitesmoke!important;
- }
 
  #main-body, #landing-body {
     background-image: url(/images/filmstrip-bg.png);

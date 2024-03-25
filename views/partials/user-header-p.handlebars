@@ -1,37 +1,45 @@
  <!--User Header-->
-<section class="py-3 pl-3 has-background-black container-spacing">
-      <div>
+<section class="mt-0 mb-3 px-0 container has-background-black">
+      <div class="has-background-light has-text-centered">
            <a id="home-button"><img src="/images/MwF-logo-hor.png" alt="Movies with Friends" height="100px"></a>
-      </div>
-      <div>
-       <h3 class="is-size-4  has-text-light">Welcome, <!--Replace programmatically with user avatar--><i class="fa-solid fa-ticket"></i>&emsp;<img src="{{user.user_avatar}}" alt="user avatar" class="inline-image" /> <span class= "chennai">{{ user.user_name }}!</span></h3>
-      </div>
-      <!--NAVIGATION FOR ALL NON-LANDING PAGES-->
-      <nav class="navbar main-menu">
-            <div class="container">
-            <div class="navbar-brand">
-                  <span class="navbar-burger has-text-light" data-target="navbarMenuMain">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  </span>
+           <div class="my-3 py-3 has-background-black">
+             <h3 class="is-size-4 has-text-light">You've got your ticket!&ensp;<span class="is-size-3"><i id="ticket-icon" class="fa-solid fa-ticket"></i></span>&ensp; Welcome, <img src="{{user_avatar}}" alt="user avatar" class="inline-image" /> <span class= "chennai">{{ user_name }}!</span></h3>
             </div>
-            <div id="navbarMenuMain" class="navbar-menu has-text-light">
-                  <div class="navbar-end">
-                         <!--***ROUTE*** render the welcome view-->
+      </div>
+</section>
+
+<section class="container">
+
+      <!--NAVIGATION FOR ALL NON-LANDING PAGES-->
+
+      <nav class="navbar has-background-black has-text-light">
+            <div class="navbar-brand">
+                  <a class="navbar-item" href="/"><img src="/images/MwF-alt-logo.png" alt="Movies with Friends">
+                  </a>
+                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                  </a>
+            </div>
+            <div id="navbarMenuMain" class="navbar-menu">
+                  <div class="navbar-start"> <!--views that are not customized-->
+                        <!--***ROUTE*** render the welcome view-->
                         <a id="goto-welcome" class="navbar-item"> This Month</a>
-                        <!--***ROUTE*** render the profile view-->
-                        <a id="goto-profile" class="navbar-item"> My Profile</a>
                         <!--***ROUTE*** render the friends view-->
                         <a id="goto-friends" class="navbar-item">Friends</a>
                         <!--***ROUTE*** render the about view-->
-                        <a id="goto-about" class="navbar-item">About Movies with Friends</a>
+                        <a id="goto-about" class="navbar-item">About</a>
                         <!--***ROUTE*** render the contact view-->
                         <a id="goto-contact" class="navbar-item">Contact Us</a>
+                  </div>
+                  <div class="navbar-end container-spacing"> <!--views that are customized for the logged in user-->
+                         <!--***ROUTE*** render the profile view-->
+                        <a id="goto-profile" class="navbar-item"> My Profile</a>
                         <!--***ROUTE*** sign out the user-->
                         <a id="sign-out" class="navbar-item">Sign Out</a>
                   </div>
-            </div>
             </div>
       </nav>
 </section>
