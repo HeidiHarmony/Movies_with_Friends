@@ -3,16 +3,17 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const withAuth = require('./utilities/auth');
 const helpers = require('./utilities/helpers');
 
-const sequelize = require("./config/connection");
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Create Handlebars engine with custom helpers
 const hbs = exphbs.create({ helpers });
+
 const sess = {
   secret: process.env.SESSION_SECRET,
   cookie: {
@@ -24,69 +25,44 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
-
-const Calendar = require("./models/Calendar");
-const Comment = require("./models/Comment");
-const DiscussionBoard = require("./models/DiscussionBoard");
-const Forum = require("./models/Forum");
-const Genre = require("./models/Genre");
-const Month = require("./models/Month");
-const Movie = require("./models/Movie");
-const Nomination = require("./models/Nomination");
-const Post = require("./models/Post");
-const User = require("./models/User");
-const Vote = require("./models/Vote");
-const { Rating } = require('./models');
 
 app.use(session(sess));
 
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
+// Set view engine to Handlebars
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
+
+// Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set default layout to 'main' for all views except the landing page
+// Set default layout for Handlebars
+app.set('view engine', 'handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-// Render landing.handlebars with a different layout
+
+// Route for the landing page
 app.get('/', (req, res) => {
   res.render('landing', { layout: 'landing-layout' });
 });
 
+// Parse incoming requests with JSON payloads
 app.use(express.json());
+
+// Parse incoming requests with URL-encoded payloads
 app.use(express.urlencoded({ extended: true }));
+
+// Use routes defined in controllers
 app.use(routes);
 
 // Sync Sequelize models and start server
-sequelize.sync({ force: true }).then(() => {
-  User.sync().then(() => {
-    Calendar.sync().then(() => {
-      Month.sync().then(() => {
-        Genre.sync().then(() => {
-          Movie.sync().then(() => {
-            Nomination.sync().then(() => {
-              Vote.sync().then(() => {
-                Rating.sync().then(() => {
-                  DiscussionBoard.sync().then(() => {
-                    Forum.sync().then(() => {
-                      Post.sync().then(() => {
-                        Comment.sync().then(() => {
-                          console.log("All models are synchronized");
-                          app.listen(PORT, () => console.log('Now listening on port ' + PORT));
-                        }).catch((err) => {
-                          console.log("Error syncing models:", err);
-                        });
-                      });
-                    });
-                  });
-                });
-              });
-            });
-          });
-        });
-      });
-    });
+sequelize.sync({ force: true })
+  .then(() => {
+    console.log('All models are synchronized');
+    app.listen(PORT, () => console.log('Now listening on port ' + PORT));
+  })
+  .catch((err) => {
+    console.log('Error syncing models:', err);
   });
-});
