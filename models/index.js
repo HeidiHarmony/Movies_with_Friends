@@ -1,18 +1,18 @@
 // Purpose: This file exports all models to be used in the application.
 
-const Calendar = require("./Calendar");
-const Comment = require("./Comment");
-const DiscussionBoard = require("./DiscussionBoard");
-const Forum = require("./Forum");
-const Genre = require("./Genre");
-// const Mention = require("./Mention");
-const Month = require("./Month");
-const Movie = require("./Movie");
-const Nomination = require("./Nomination");
-const Post = require("./Post");
-const Rating = require("./Rating");
-const User = require("./User");
-const Vote = require("./Vote"); 
+const Calendar = require("./Calendar.js");
+const Comment = require("./Comment.js");
+const DiscussionBoard = require("./DiscussionBoard.js");
+const Forum = require("./Forum.js");
+const Genre = require("./Genre.js");
+// const Mention = require("./Mention.js");
+const Month = require("./Month.js");
+const Movie = require("./Movie.js");
+const Nomination = require("./Nomination.js");
+const Post = require("./Post.js");
+const Rating = require("./Rating.js");
+const User = require("./User.js");
+const Vote = require("./Vote.js"); 
 
 // Associations
 
