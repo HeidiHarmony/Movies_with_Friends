@@ -19,17 +19,12 @@ const Vote = require("./Vote");
 // Calendar Aspect
 
 Calendar.hasMany(Month, {
-  foreignKey: 'calendar_id',
+  foreignKey: 'month_id',
   onDelete: 'CASCADE'
 });
 
 Month.belongsTo(Calendar, {
-  foreignKey: 'calendar_id'
-});
-
-Month.hasOne(Genre, {
-  foreignKey: 'genre_id',
-  onDelete: 'CASCADE'
+  foreignKey: 'month_id'
 });
 
 Genre.belongsTo(Month, {
@@ -51,7 +46,7 @@ Month.hasOne(DiscussionBoard, {
 });
 
 DiscussionBoard.belongsTo(Month, {
-  foreignKey: 'discussion_id'
+  foreignKey: 'month_id'
 });
 
 // Discussion and Rating Aspect
@@ -118,20 +113,6 @@ User.hasMany(Comment, {
 Comment.belongsTo(User, { 
   foreignKey: 'user_id'
 });
-
-/* Mention.hasMany(User, {
-  foreignKey: 'mention_id',
-  onDelete: 'CASCADE'
-}); */
-
-/* User.belongsTo(Mention, {
-  foreignKey: 'mention_id'
-});
-
-User.hasMany(Mention, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-}); */
 
 // Nomination and Voting Aspect
 

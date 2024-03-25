@@ -22,21 +22,6 @@ Month.init(
           key: 'id',
         }
     },
-    genre_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'genre',
-        key: 'id',
-      },
-    },
-    movie_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'movie',
-        key: 'id',
-      },
-    },
   },
   {
     sequelize,
@@ -44,6 +29,7 @@ Month.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'month',
+    tableName: 'month',
   }
 );
 

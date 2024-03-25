@@ -1,9 +1,10 @@
 const sequelize = require('../config/connection');
-const { User, Genre, Calendar, Movie } = require('../models');
+const { User, Calendar, Month, Genre, Movie } = require('../models');
 
 const userData = require('./userData');
-const genreData = require('./genreData');
 const calendarData = require('./calendarData');
+const monthData = require('./monthData');
+const genreData = require('./genreData');
 const movieData = require('./movieData');
 
 const seedDatabase = async () => {
@@ -13,12 +14,6 @@ const seedDatabase = async () => {
     await User.create({
       ...user,
       individualHooks: true,
-    });
-  }
-
-  for (const genre of genreData) {
-    await Genre.create({
-      ...genre,
     });
   }
 
@@ -33,7 +28,19 @@ const seedDatabase = async () => {
     await Calendar.create({
       ...calendar,
     });
-}
+  }
+
+  for (const month of monthData) {
+    await Month.create({
+      ...month,
+    });
+  } 
+
+  for (const genre of genreData) {
+    await Genre.create({
+      ...genre,
+    });
+  }
   
   for (const movie of movieData) {
     await Movie.create({ ...movie });

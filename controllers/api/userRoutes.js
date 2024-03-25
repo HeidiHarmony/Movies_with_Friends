@@ -167,6 +167,6 @@ router.get('/my-votes', async (req, res) => {
     console.error(err);
     res.status(500).send('Error retrieving user\'s voting history');
   }
-});
+}); */
 
-module.exports = router; */
+module.exports = router; 

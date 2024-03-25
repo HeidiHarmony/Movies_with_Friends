@@ -40,6 +40,7 @@ const Nomination = require("./models/Nomination");
 const Post = require("./models/Post");
 const User = require("./models/User");
 const Vote = require("./models/Vote");
+const { Rating } = require('./models');
 
 app.use(session(sess));
 
@@ -63,14 +64,16 @@ sequelize.sync({ force: true }).then(() => {
           Movie.sync().then(() => {
             Nomination.sync().then(() => {
               Vote.sync().then(() => {
-                DiscussionBoard.sync().then(() => {
-                  Forum.sync().then(() => {
-                    Post.sync().then(() => {
-                      Comment.sync().then(() => {
-                        console.log("All models are synchronized");
-                        app.listen(PORT, () => console.log('Now listening on port ' + PORT));
+                Rating.sync().then(() => {
+                  DiscussionBoard.sync().then(() => {
+                    Forum.sync().then(() => {
+                      Post.sync().then(() => {
+                        Comment.sync().then(() => {
+                          console.log("All models are synchronized");
+                          app.listen(PORT, () => console.log('Now listening on port ' + PORT));
                       }).catch((err) => {
                         console.log("Error syncing models:", err);
+                        });
                       });
                     });
                   });

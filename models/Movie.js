@@ -17,7 +17,7 @@ Movie.init(
       allowNull: false,
     },
     overview: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(2000),
       allowNull: false,
     },
     link: {
