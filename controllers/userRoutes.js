@@ -55,26 +55,31 @@ router.post('/signup', async (req, res) => {
 // ROUTE: Sign in the user with the email and password
 router.post('/signin', async (req, res) => {
   try {
+    console.log("beginning sign in");
     const { email, password } = req.body;
     if (!email || !password) {
+      console.log("error1");
       res.status(400).json({ message: 'Please provide both email and password.' });
       return;
     }
 
     const userData = await User.findOne({ where: { email } });
     if (!userData) {
+      console.log("error2");
       res.status(400).json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
     const validPassword = await userData.checkPassword(password);
     if (!validPassword) {
+      console.log("error3");
       res.status(400).json({ message: 'Incorrect email or password, please try again' });
       return;
     }
 
     // Store user ID in session for later use
     req.session.user_id = userData.id;
+    console.log("session info:");
     req.session.logged_in = true;
     console.log(req.session.user_id);
     console.log(req.session.logged_in);

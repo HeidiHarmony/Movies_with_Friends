@@ -1,27 +1,46 @@
 // Landing page
-document.addEventListener("DOMContentLoaded", function() {
 
 // Toggle sign in form visibility
 const landingShowLogin = document.getElementById("landing-showlogin");
 // container holding the form which begins hidden
 const signInMember = document.getElementById("signin-member");
-const landingSignIn = document.getElementById("landing-signin");
+const landingSignIn = document.getElementById("landing-signin"); //button to submit the form
 const signInForm = document.getElementById("signin-form"); 
 
+//Show the form
 landingShowLogin.addEventListener("click", function () {
 signInMember.classList.toggle("visible-form");
   console.log("clicked show signin form button");
 });
 
+const email = document.querySelector('email-login').value.trim();
+const password = document.querySelector('#password-login').value.trim();
 
 landingSignIn.onclick = function (event) {
   event.preventDefault(); // prevent the default action
+
+  if (email && password) {
+    // Send a POST request to the API endpoint
+    const response = await fetch('/userRoutes', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.replace('/welcome');
+    } else {
+      alert(response.statusText);
+    }
+  
   signInForm.submit(); // submit the form
-  window.location.href = "/welcome";
+  // window.location.href = "/welcome";
   console.log("clicked sign in button");
 };
+};
 
-});
+
 
 // submit the sign in form
 /* const landingSignIn = document.getElementById("landing-signin");
@@ -33,7 +52,7 @@ landingSignIn.onclick = function () {
 
 
 // Landing page Sign Up
-document.addEventListener("DOMContentLoaded", function() {
+
 
 const showSignUp = document.getElementById("landing-showsignup");
 const signUpContainer = document.getElementById("signup-container");
@@ -54,5 +73,5 @@ submitSignUp.onclick = function (event) {
   window.location.href = "/welcome";
   console.log("clicked sign up button");
 };
-});
+
 

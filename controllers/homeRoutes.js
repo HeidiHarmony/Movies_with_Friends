@@ -13,8 +13,10 @@ router.get('/', async (req, res) => {
 router.get("/welcome", async (req, res) => {
   try {
     // Retrieve the user data based on the user_id stored in the session
+    console.log(req.session.user_id);
     const userData = await User.findByPk(req.session.user_id);
-
+    
+console.log(userData);
     // Retrieve all movie data
     const movieData = await Movie.findAll();
 
