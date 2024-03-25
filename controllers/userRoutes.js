@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require('../models');
 
+// ROUTES FOR USER AUTHENTICATION AND VIEW REDIRECTION, TAKING PLACE ON THE LANDING PAGE (landing-layout.handlebars)
 
 // ROUTE: Create a new user. They will be automatically logged in and redirected to the welcome page
 router.post('/signup', async (req, res) => {
