@@ -52,8 +52,8 @@
       </div> <!--end of hero-head-->
    
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body theater">
-      <div class="container has-text-centered pt-2 px-6">
+    <div class="hero-body is-fullwidth pb-1 theater">
+      <div class="container has-text-centered pt-2 px-5">
         <section class="top-start">
             <h1 class="has-text-light has-shadow is-size-3-mobile is-size-2-tablet is-size-2-desktop">You might want to join <span class="chennai">Movies with Friends</span> if...</h1>
         </section>
@@ -66,19 +66,18 @@
         <section>
             <p class="has-text-success is-size-5"><span><i class="fa-solid fa-share-nodes is-size-3 mt-2 mr-3"></i></span>You post about movies on other social media platforms, <br />but not everyone shares your passion for analysis or has watched the same films.</p>
         </section>
-          <!--Call to action-->
-        <div class="container has-text-centered mx-auto">
-          <p class="is-size-5 has-text-light">Sign up for <span class="chennai">Movies with Friends</span> today and join the conversation!</p>
-      </div>
-    </div>
+
  <!--sign up box, invisible until the sign up button is clicked-->
-      <div id="signup-container" class="hidden-form container">
+ <container class="container">
+      <div id="signup-container" class="hidden-form">
         {{> signup-p}}
      </div>
+ </container>
+  
    <!--sign in box, invisible until the sign in button is clicked-->
- <container id="signin-member" class="hidden-form">
+ <container class="container">
           <!--sign in form -->
-          <div class="box mx-auto level">
+          <div id="signin-member" class="hidden-form box mx-auto level">
             <form id="signin-form">
 
               <div class="level-left">
@@ -103,20 +102,27 @@
               <!--sign in the user here-->
               <button id="landing-signin" class="button is-danger level-item pl-2">Sign in</button>
             </div>
+
         </form>
       </div>
     </container> <!--end of sign in box--> 
-<!--Buttons to show the sign in form or open the sign up modal-->
-       <div id ="entry-buttons" class="container mx-auto">
-            <a id="landing-showsignup" class="button m-2 hero-button is-danger">Sign Up</a>
-            <a id ="landing-showlogin" class="button m-2 hero-button is-danger is-outlined">Member Sign In</a>
-        </div>              
+
+    </div>
 </div><!--end of hero-body-->
      
  <!--Hero footer: will stick at the bottom-->
     <div class="hero-foot">
+      <!--Call to action-->
+        <div class="container has-text-centered mx-auto">
+          <p class="is-size-5 has-text-light">Sign up for <span class="chennai">Movies with Friends</span> today and join the conversation!</p>
+        <div id ="entry-buttons" class="container mx-auto">
+            <a id="landing-showsignup" class="button m-2 hero-button is-danger">Sign Up</a>
+            <a id ="landing-showlogin" class="button m-2 hero-button is-danger is-outlined">Member Sign In</a>
+        </div>
+      </div>              
      {{> footer-p }}
-    </div>  <!--end of hero-->
+    </div>
+     </section>
   
   <script src="/javascript/mwf-misc.js"></script>
   <script src="/javascript/phase.js"></script>

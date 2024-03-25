@@ -39,9 +39,10 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set default layout for Handlebars
-app.set('view engine', 'handlebars');
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+// Register Handlebars helpers individually
+Object.entries(helpers).forEach(([key, value]) => {
+  hbs.handlebars.registerHelper(key, value);
+});
 
 // Route for the landing page
 app.get('/', (req, res) => {

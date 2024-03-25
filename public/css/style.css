@@ -247,6 +247,12 @@ body {
     display: none;
 }
 
+#show-signup {
+  border: 1px;
+  border-color: magenta;
+  border-style: solid;
+}
+
 
 .test {
     border: 1px;

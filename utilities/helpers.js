@@ -10,5 +10,9 @@ module.exports = {
     const day = formattedDate.getDate();
     const year = formattedDate.getFullYear();
     return `${month}/${day}/${year}`;
+  },
+  
+  eq: function (value1, value2) {
+    return value1 === value2;
   }
-};
+}
