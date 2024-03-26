@@ -27,26 +27,21 @@ landingSignIn.onclick = async function (event) { // Make the function async
   if (email && password) {
     console.log("pre-route-grab");
     // Send a POST request to the API endpoint
-    try {
-      const response = await fetch('/signin', {
+
+      const response = await fetch('/userRoutes/signin', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
       });
+       
 
       if (response.ok) {
         // If successful, redirect the browser to the profile page
         document.location.replace('/welcome');
       } else {
-        alert(await response.text()); // Await the response text
+        alert(response.statusText); // Await the response text
         console.log("error");
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
-    }
+      } 
   }
 };
 
