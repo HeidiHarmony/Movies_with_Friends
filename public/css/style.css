@@ -399,11 +399,11 @@ main h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0 !important;
 }
 
-.hidden-form {
+/* .hidden-form {
     display: none;
     overflow: hidden;
     transition: height 0.5s;
-}
+} */
 
 .hidden-signup-form {
     display: none;

@@ -9,46 +9,46 @@ const signInForm = document.getElementById("signin-form");
 
 //Show the form
 landingShowLogin.addEventListener("click", function () {
+  console.log("clicked show sign in form button");
 signInMember.classList.toggle("visible-form");
   console.log("clicked show signin form button");
 });
 
-const email = document.querySelector('email-login').value.trim();
-const password = document.querySelector('#password-login').value.trim();
 
-landingSignIn.onclick = function (event) {
+
+// Submit the sign in form
+landingSignIn.onclick = async function (event) { // Make the function async
   event.preventDefault(); // prevent the default action
+  console.log("clicked sign in button");
+
+  const email = document.getElementById('email-login').value.trim();
+  const password = document.getElementById('password-login').value.trim();
 
   if (email && password) {
+    console.log("pre-route-grab");
     // Send a POST request to the API endpoint
-    const response = await fetch('/userRoutes', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+    try {
+      const response = await fetch('/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
 
-    if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/welcome');
-    } else {
-      alert(response.statusText);
+      if (response.ok) {
+        // If successful, redirect the browser to the profile page
+        document.location.replace('/welcome');
+      } else {
+        alert(await response.text()); // Await the response text
+        console.log("error");
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again later.');
     }
-  
-  signInForm.submit(); // submit the form
-  // window.location.href = "/welcome";
-  console.log("clicked sign in button");
+  }
 };
-};
-
-
-
-// submit the sign in form
-/* const landingSignIn = document.getElementById("landing-signin");
-landingSignIn.onclick = function () {
-  window.location.href = "/welcome";
-  console.log("clicked sign in button");
-}; */
-
 
 
 // Landing page Sign Up

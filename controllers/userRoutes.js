@@ -55,37 +55,23 @@ router.post('/signup', async (req, res) => {
 // ROUTE: Sign in the user with the email and password
 router.post('/signin', async (req, res) => {
   try {
-    console.log("beginning sign in");
-    const { email, password } = req.body;
-    if (!email || !password) {
-      console.log("error1");
-      res.status(400).json({ message: 'Please provide both email and password.' });
-      return;
-    }
-
+    // Check if the user exists and the password is correct
     const userData = await User.findOne({ where: { email } });
-    if (!userData) {
-      console.log("error2");
-      res.status(400).json({ message: 'Incorrect email or password, please try again' });
-      return;
+
+    if (!userData || !User.validPassword(password)) {
+      return res.status(401).json({ message: 'Invalid email or password' });
     }
 
-    const validPassword = await userData.checkPassword(password);
-    if (!validPassword) {
-      console.log("error3");
-      res.status(400).json({ message: 'Incorrect email or password, please try again' });
-      return;
-    }
-
-    // Store user ID in session for later use
-    req.session.user_id = userData.id;
-    console.log("session info:");
-    req.session.logged_in = true;
-    console.log(req.session.user_id);
-    console.log(req.session.logged_in);
-
-    // Redirect user to the welcome page
+     // Store user ID in session for later use
+     req.session.user_id = userData.id;
+     console.log("session info:");
+     req.session.logged_in = true;
+     console.log(req.session.user_id);
+     console.log(req.session.logged_in);
+    
     res.redirect('/welcome');
+    console.log('User signed in successfully');
+
   } catch (err) {
     res.status(400).json(err);
   }

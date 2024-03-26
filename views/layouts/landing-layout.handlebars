@@ -66,19 +66,19 @@
         <section>
             <p class="has-text-success is-size-5"><span><i class="fa-solid fa-share-nodes is-size-3 mt-2 mr-3"></i></span>You post about movies on other social media platforms, <br />but not everyone shares your passion for analysis or has watched the same films.</p>
         </section>
+ <!--Call to action-->
+        <div class="container has-text-centered mx-auto">
+        
+       <!-- <div id ="entry-buttons" class="container mx-auto">
+            <a id="landing-showsignup" class="button m-2 hero-button is-danger">Sign Up</a>
+            <a id ="landing-showlogin" class="button m-2 hero-button is-danger is-outlined">Member Sign In</a>
+        </div> -->
 
- <!--sign up box, invisible until the sign up button is clicked-->
- <container class="container">
-      <div id="signup-container" class="hidden-form">
-        {{> signup-p}}
-     </div>
- </container>
-  
-   <!--sign in box, invisible until the sign in button is clicked-->
+         <!--sign in box, invisible until the sign in button is clicked-->
  <container class="container">
           <!--sign in form -->
-          <div id="signin-member" class="hidden-form box mx-auto level">
-            <form id="signin-form">
+          <div id="signin-member" class="hidden-form container mx-auto level">
+            <form method="post" id="signin-form" class="p-2">
 
               <div class="level-left">
 
@@ -100,26 +100,27 @@
             
             <div class="level-right">
               <!--sign in the user here-->
-              <button id="landing-signin" class="button is-danger level-item pl-2">Sign in</button>
+              <button id="landing-signin" class="button is-danger level-item pl-2" >Sign in</button>
             </div>
 
         </form>
       </div>
     </container> <!--end of sign in box--> 
-
-    </div>
+      </div>              
+ <!--sign up box, invisible until the sign up button is clicked-->
+ <container class="container">
+    <p class="is-size-5 has-text-light">Sign up for <span class="chennai">Movies with Friends</span> today and join the conversation!</p>
+      <div id="signup-container" class="hidden-form">
+        {{> signup-p}}
+     </div>
+ </container>
+  
+  </div>
 </div><!--end of hero-body-->
      
  <!--Hero footer: will stick at the bottom-->
     <div class="hero-foot">
-      <!--Call to action-->
-        <div class="container has-text-centered mx-auto">
-          <p class="is-size-5 has-text-light">Sign up for <span class="chennai">Movies with Friends</span> today and join the conversation!</p>
-        <div id ="entry-buttons" class="container mx-auto">
-            <a id="landing-showsignup" class="button m-2 hero-button is-danger">Sign Up</a>
-            <a id ="landing-showlogin" class="button m-2 hero-button is-danger is-outlined">Member Sign In</a>
-        </div>
-      </div>              
+     
      {{> footer-p }}
     </div>
      </section>
