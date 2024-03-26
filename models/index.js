@@ -10,7 +10,7 @@ const Month = require("./Month.js");
 const Movie = require("./Movie.js");
 const Nomination = require("./Nomination.js");
 const Post = require("./Post.js");
-const Rating = require("./Rating.js");
+// const Rating = require("./Rating.js");
 const User = require("./User.js");
 const Vote = require("./Vote.js"); 
 
@@ -51,23 +51,23 @@ DiscussionBoard.belongsTo(Month, {
 
 // Discussion and Rating Aspect
 
-User.hasMany(Rating, {
+/* User.hasMany(Rating, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
-});
+}); */
 
-Rating.belongsTo(User, {
+/* Rating.belongsTo(User, {
   foreignKey: 'user_id'
-});
+}); */
 
-Movie.hasMany(Rating, {
+/* Movie.hasMany(Rating, {
   foreignKey: 'movie_id',
   onDelete: 'CASCADE'
-});
+}); */
 
-Rating.belongsTo(Movie, {
+/* Rating.belongsTo(Movie, {
   foreignKey: 'movie_id'
-});
+}); */
 
 DiscussionBoard.hasMany(Forum, {
   foreignKey: 'discussion_id',

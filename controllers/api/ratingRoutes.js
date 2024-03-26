@@ -1,6 +1,6 @@
 const router = require("express").Router();
 require("../../models");
-require("../../models/Rating");
+// require("../../models/Rating");
 
 
 /* router.get("/:movieId", async (req, res) => {
