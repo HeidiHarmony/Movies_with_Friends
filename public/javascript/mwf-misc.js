@@ -17,7 +17,7 @@ signInMember.classList.toggle("visible-form");
 
 
 // Submit the sign in form
-landingSignIn.onclick = async function (event) { // Make the function async
+landingSignIn.addEventListener("click", async function (event) {
   event.preventDefault(); // prevent the default action
   console.log("clicked sign in button");
 
@@ -27,25 +27,21 @@ landingSignIn.onclick = async function (event) { // Make the function async
   if (email && password) {
     console.log("pre-route-grab");
     // Send a POST request to the API endpoint
+    const response = await fetch('/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 
-      const response = await fetch('/userRoutes/signin', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-       
-
-      if (response.ok) {
-        // If successful, redirect the browser to the profile page
-        document.location.replace('/welcome');
-      } else {
-        alert(response.statusText); // Await the response text
-        console.log("error");
-      } 
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.replace('/welcome');
+    } else {
+      alert(await response.statusText); // Await the response text
+      console.log("error");
+    } 
   }
-};
-
-
+});
 // Landing page Sign Up
 
 

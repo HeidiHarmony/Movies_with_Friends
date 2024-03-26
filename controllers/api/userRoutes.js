@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require('../models');
+const User = require('../../models');
 
 // ROUTES FOR USER AUTHENTICATION AND VIEW REDIRECTION, TAKING PLACE ON THE LANDING PAGE (landing-layout.handlebars)
 
@@ -60,7 +60,7 @@ router.post('/signin', async (req, res) => {
 
     if (!userData) {
       res
-      .status(401)
+      .status(400)
       .json({ message: 'Invalid email or password' });
       return;
     }
@@ -69,7 +69,7 @@ router.post('/signin', async (req, res) => {
 
     if (!validPassword) {
       res
-      .status(401)
+      .status(400)
       .json({ message: 'Invalid email or password' });
       return;
     }
@@ -103,6 +103,8 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+module.exports = router; 
 
 
 // Display user's info
@@ -167,4 +169,3 @@ router.get('/my-votes', async (req, res) => {
   }
 }); */
 
-module.exports = router; 
